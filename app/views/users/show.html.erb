@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<!-- <p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p> -->
+
+<div class="docs">
+<% @user.documents.each do |docs| %>
+<%= docs.title %>
+<% end %>
+</div>
+
+<!-- <%= link_to 'Edit', edit_user_path(@user) %> |  -->
+<%= link_to 'Upload New Doc', new_document_path %>
