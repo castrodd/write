@@ -1,6 +1,6 @@
 class DocumentsController < ApplicationController
   before_action :set_document, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_user, only: [:new, :create]
   # GET /documents
   # GET /documents.json
   def index
@@ -14,7 +14,7 @@ class DocumentsController < ApplicationController
 
   # GET /documents/new
   def new
-    @document = Document.new
+    @document = @user.documents.new
   end
 
   # GET /documents/1/edit
@@ -28,7 +28,7 @@ class DocumentsController < ApplicationController
 
     respond_to do |format|
       if @document.save
-        format.html { redirect_to @document, notice: 'Document was successfully created.' }
+        format.html { redirect_to @user, notice: 'Document was successfully created.' }
         format.json { render :show, status: :created, location: @document }
       else
         format.html { render :new }
@@ -67,6 +67,9 @@ class DocumentsController < ApplicationController
       @document = Document.find(params[:id])
     end
 
+    def set_user
+      @user = User.find(params[:user_id])
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def document_params
       params.require(:document).permit(:title, :content)

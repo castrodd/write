@@ -14,7 +14,9 @@ RSpec.feature "user creates account", type: :feature do
     fill_in "Username", with: "My special name"
     fill_in "Password", with: "Hush hush baby"
     click_button "Sign Up"
-    expect(page).to have_link 'Create Document', href: new_document_path
+    # @user = User.find_by(params[:id])
+    # id = assigns[:user].id
+    expect(page).to have_link 'Create Document', href: new_user_document_path(@user)
   end
 
   scenario "is successful in uploading document" do
@@ -22,7 +24,8 @@ RSpec.feature "user creates account", type: :feature do
     fill_in "Username", with: "My special name"
     fill_in "Password", with: "Hush hush baby"
     click_button "Sign Up"
-    click_link 'Create Document'
+    # @user = User.find_by(params[:id])
+    click_link 'Create Document', href: new_user_document_path(@user)
     fill_in 'Title', with: "My Awesome Essay"
     fill_in 'Content', with: "Life is to be lived, not controlled; and humanity is won by continuing to play in face of certain defeat."
     click_button 'Stylize'
