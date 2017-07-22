@@ -1,3 +1,57 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  color: white;
+}
+
+.bg-1 {
+  background-image: url(writer.jpg);
+  background-size: cover;
+  background-attachment: scroll;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.bg-2 {
+  background-image: url(desk-and-typewriter.jpg);
+  background-size: cover;
+  background-attachment: scroll;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.bg-3 {
+  background-image: url(typewriterbw.jpg);
+  background-size: cover;
+  background-attachment: scroll;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+h3 {
+  text-shadow: 1px 1px black;
+  animation: fadeInDown 3s;
+}
+
+.margin {
+  font-size: 50px;
+  margin-bottom: 400px;
+}
+
+p {
+  text-shadow: 1px 1px 1px black;
+  animation: fadeInDown 3s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
