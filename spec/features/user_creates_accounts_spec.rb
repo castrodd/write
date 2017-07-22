@@ -19,15 +19,4 @@ RSpec.feature "user creates account", type: :feature do
     click_button "Log in"
     expect(page).to have_content 'Welcome back, Special!'
   end
-
-  scenario "is successful in uploading document" do
-    fill_in "Username", with: "Special"
-    fill_in "Password", with: "Confidential"
-    click_button "Log in"
-    click_link 'Create Document'
-    fill_in 'document_title', with: "My Awesome Essay"
-    fill_in 'document_content', with: "Life is to be lived, not controlled; and humanity is won by continuing to play in face of certain defeat."
-    click_button 'Stylize'
-    expect(page).to have_content 'My Awesome Essay'
-  end
 end
