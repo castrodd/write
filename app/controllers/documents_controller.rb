@@ -1,4 +1,7 @@
+require 'rule'
+
 class DocumentsController < ApplicationController
+  include Rule
   before_action :set_document, only: [:show, :edit, :update, :destroy]
   before_action :require_logged_in
   # GET /documents
@@ -25,8 +28,13 @@ class DocumentsController < ApplicationController
   # POST /documents
   # POST /documents.json
   def create
-    params[:document][:review] = 'test'
     @document = current_user.documents.new(document_params)
+
+    # Here we scan the document's contents with our 'rules'
+    # Save the results in a hash and store the hash as an attribute of doc
+
+    @document.review = {'key' => 'value'}
+    allusion(@document.content, @document.review)
 
     respond_to do |format|
       if @document.save
