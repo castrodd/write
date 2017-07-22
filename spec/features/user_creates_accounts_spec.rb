@@ -1,33 +1,32 @@
 require 'rails_helper'
 
 RSpec.feature "user creates account", type: :feature do
-  scenario "is successful in creating account" do
+  before do
     visit new_user_path
-    fill_in "Username", with: "My special name"
-    fill_in "Password", with: "Hush hush baby"
-    click_button "Sign Up"
-    expect(page).to have_content "User was successfully created."
+    fill_in "Username", with: "Special"
+    fill_in "Password", with: "Confidential"
+    fill_in "Password confirmation", with: "Confidential"
+    click_button "Create Account"
   end
 
-  scenario "is able to create document" do
-    visit new_user_path
-    fill_in "Username", with: "My special name"
-    fill_in "Password", with: "Hush hush baby"
-    click_button "Sign Up"
-    # @user = User.find_by(params[:id])
-    # id = assigns[:user].id
-    expect(page).to have_link 'Create Document', href: new_user_document_path(@user)
+  scenario "is successful in creating account" do
+    expect(page).to have_content "Created Account"
+  end
+
+  scenario "is able to view user page" do
+    fill_in "Username", with: "Special"
+    fill_in "Password", with: "Confidential"
+    click_button "Log in"
+    expect(page).to have_content 'Welcome back, Special!'
   end
 
   scenario "is successful in uploading document" do
-    visit new_user_path
-    fill_in "Username", with: "My special name"
-    fill_in "Password", with: "Hush hush baby"
-    click_button "Sign Up"
-    # @user = User.find_by(params[:id])
-    click_link 'Create Document', href: new_user_document_path(@user)
-    fill_in 'Title', with: "My Awesome Essay"
-    fill_in 'Content', with: "Life is to be lived, not controlled; and humanity is won by continuing to play in face of certain defeat."
+    fill_in "Username", with: "Special"
+    fill_in "Password", with: "Confidential"
+    click_button "Log in"
+    click_link 'Create Document'
+    fill_in 'document_title', with: "My Awesome Essay"
+    fill_in 'document_content', with: "Life is to be lived, not controlled; and humanity is won by continuing to play in face of certain defeat."
     click_button 'Stylize'
     expect(page).to have_content 'My Awesome Essay'
   end

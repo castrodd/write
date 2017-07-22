@@ -1,10 +1,11 @@
 class DocumentsController < ApplicationController
   before_action :set_document, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:new, :create]
+  before_action :require_logged_in
   # GET /documents
   # GET /documents.json
   def index
-    @documents = Document.all
+    @user = current_user
+    @documents = current_user.documents
   end
 
   # GET /documents/1
@@ -14,7 +15,7 @@ class DocumentsController < ApplicationController
 
   # GET /documents/new
   def new
-    @document = @user.documents.new
+    @document = current_user.documents.new
   end
 
   # GET /documents/1/edit
@@ -24,12 +25,12 @@ class DocumentsController < ApplicationController
   # POST /documents
   # POST /documents.json
   def create
-    @document = Document.new(document_params)
+    @document = current_user.documents.new(document_params)
 
     respond_to do |format|
       if @document.save
-        format.html { redirect_to @user, notice: 'Document was successfully created.' }
-        format.json { render :show, status: :created, location: @document }
+        format.html { redirect_to documents_path, notice: 'Document was successfully created.' }
+        format.json { render :index, status: :created, location: @documents }
       else
         format.html { render :new }
         format.json { render json: @document.errors, status: :unprocessable_entity }
@@ -64,14 +65,11 @@ class DocumentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_document
-      @document = Document.find(params[:id])
+      @document = current_user.documents.find(params[:id])
     end
 
-    def set_user
-      @user = User.find(params[:user_id])
-    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def document_params
-      params.require(:document).permit(:title, :content)
+      params.require(:document).permit(:title, :content, :user_id)
     end
 end
