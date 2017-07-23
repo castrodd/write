@@ -21,10 +21,12 @@
 
         <p>
           <strong>Tips:</strong>
+          <br>
           <% tips = document.review %>
           <% if tips %>
             <% tips.keys.each do |t| %>
               <%= t.upcase %>: <em><%= tips[t] %></em>
+          <br>
             <% end %>
           <% end %>
         </p>
