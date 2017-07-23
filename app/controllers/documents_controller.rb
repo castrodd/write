@@ -1,4 +1,7 @@
+require 'rule'
+
 class DocumentsController < ApplicationController
+  include Rule
   before_action :set_document, only: [:show, :edit, :update, :destroy]
   before_action :require_logged_in
   # GET /documents
@@ -26,6 +29,11 @@ class DocumentsController < ApplicationController
   # POST /documents.json
   def create
     @document = current_user.documents.new(document_params)
+
+    # Here we scan the document's contents with our 'rules'
+    # Save the results in a hash and store the hash as an attribute of document
+    @document.review = {}
+    Rule.instance_methods.each {|func| send func, @document.content, @document.review }
 
     respond_to do |format|
       if @document.save
@@ -70,6 +78,6 @@ class DocumentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def document_params
-      params.require(:document).permit(:title, :content, :user_id)
+      params.require(:document).permit(:title, :content, :user_id, :review)
     end
 end
