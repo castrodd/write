@@ -2,14 +2,13 @@ require 'rails_helper'
 
 RSpec.feature "user creates documents", type: :feature do
   before do
-    visit new_user_path
+    visit root_path
+    click_link 'Login'
+    click_link 'Sign Up'
     fill_in "Username", with: "Special"
     fill_in "Password", with: "Confidential"
     fill_in "Password confirmation", with: "Confidential"
     click_button "Create Account"
-    fill_in "Username", with: "Special"
-    fill_in "Password", with: "Confidential"
-    click_button "Log in"
     click_link 'Create Document'
     fill_in 'document_title', with: "My Awesome Essay"
     fill_in 'document_content', with: "Life is to be lived, not controlled; and humanity is won by continuing to play in face of certain defeat."
