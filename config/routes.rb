@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-
+  get 'logout' => 'sessions#destroy'
   get 'users/new'
 
   get 'welcome/index'
