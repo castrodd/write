@@ -12,12 +12,20 @@ RSpec.feature "document produces reviews", type: :feature do
     click_button "Log in"
     click_link 'Create Document'
     fill_in 'document_title', with: "My Awesome Essay"
-    fill_in 'document_content', with: "His tweets were acts of a hostile character."
+    fill_in 'document_content', with: "His tweets created an allusion of reality. Perhaps they were only meant to aggravate. Is that allright?"
     click_button 'Stylize'
     click_link 'Show'
   end
 
-  scenario "document index page includes review" do
-    
+  scenario "document page includes review with one tip" do
+    expect(page).to have_content "Easily confused with illusion"
+  end
+
+  scenario "review includes two tips" do
+    expect(page).to have_content "an already troublesome or vexing matter"
+  end
+
+  scenario "review includes more than two tips" do
+    expect(page).to have_content "Properly written as two words"
   end
 end

@@ -31,10 +31,9 @@ class DocumentsController < ApplicationController
     @document = current_user.documents.new(document_params)
 
     # Here we scan the document's contents with our 'rules'
-    # Save the results in a hash and store the hash as an attribute of doc
-
-    @document.review = {'key' => 'value'}
-    allusion(@document.content, @document.review)
+    # Save the results in a hash and store the hash as an attribute of document
+    @document.review = {}
+    Rule.instance_methods.each {|func| send func, @document.content, @document.review }
 
     respond_to do |format|
       if @document.save
