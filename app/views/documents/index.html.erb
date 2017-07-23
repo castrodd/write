@@ -39,13 +39,16 @@
       <tr>
         <td><%= document.title %></td>
         <td><%= document.content %></td>
-        <td><%= link_to 'Show', document_path(document) %></td>
+        <td><%= link_to 'Show', '#', :'data-toggle'=>"modal", :'data-target'=>"##{document.id}" %></td>
         <td><%= link_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+        <%= render partial: 'show', locals: { document: document} %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'Create Document', new_document_path %>
+<%= link_to 'Create Document', '#', :'data-toggle'=>"modal", :'data-target'=>"#documentModal" %>
+
+<%= render partial: 'form', locals: {user: @user, new_document: @new_document} %>

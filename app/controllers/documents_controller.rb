@@ -9,6 +9,7 @@ class DocumentsController < ApplicationController
   def index
     @user = current_user
     @documents = current_user.documents
+    @new_document = Document.new
   end
 
   # GET /documents/1

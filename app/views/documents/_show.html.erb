@@ -1,0 +1,37 @@
+<!-- Modal -->
+<div class="modal fade" id="<%= document.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>Title:</strong>
+          <%= document.title %>
+        </p>
+
+        <p>
+          <strong>Content:</strong>
+          <%= document.content %>
+        </p>
+
+        <p>
+          <strong>Tips:</strong>
+          <% tips = document.review %>
+          <% if tips %>
+            <% tips.keys.each do |t| %>
+              <%= t.upcase %>: <em><%= tips[t] %></em>
+            <% end %>
+          <% end %>
+        </p>
+
+        <%= link_to 'Edit', edit_document_path(document) %> |
+        <%= link_to 'Back', documents_path %>
+      </div>
+    </div>
+  </div>
+</div>
