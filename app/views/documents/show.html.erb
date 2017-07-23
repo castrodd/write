@@ -10,5 +10,15 @@
   <%= @document.content %>
 </p>
 
+<p>
+  <strong>Tips:</strong>
+  <% tips = @document.review %>
+  <% if tips %>
+    <% tips.keys.each do |t| %>
+      <%= t.upcase %>: <em><%= tips[t] %></em>
+    <% end %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>
