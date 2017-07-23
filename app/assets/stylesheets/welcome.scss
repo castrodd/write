@@ -2,35 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  color: white;
-}
-
 .bg-1 {
+  color: white;
   background-image: url(writer.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: scroll;
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
 .bg-2 {
+  color: white;
   background-image: url(desk-and-typewriter.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: scroll;
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
 .bg-3 {
+  color: white;
   background-image: url(typewriterbw.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
-h3 {
+.fadein {
   text-shadow: 1px 1px black;
   animation: fadeInDown 3s;
 }
@@ -38,11 +43,6 @@ h3 {
 .margin {
   font-size: 50px;
   margin-bottom: 400px;
-}
-
-p {
-  text-shadow: 1px 1px 1px black;
-  animation: fadeInDown 3s;
 }
 
 @keyframes fadeInDown {
@@ -58,4 +58,15 @@ p {
 
 .top-navigation {
   margin: 0;
+  border-radius: 0;
+}
+
+.title {
+  font-size: 75px;
+}
+
+.quote {
+  font-size: 40;
+  color: #503e3e;
+  border-left: none;
 }

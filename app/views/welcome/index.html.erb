@@ -12,24 +12,16 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <!-- <ul class="nav navbar-nav"> </ul> -->
+      <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><%= link_to 'Sign In', sessions_new_path %></li>
             <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><%= link_to 'Sign Up', users_new_path %></li>
           </ul>
         </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Sign In', sessions_new_path %></li>
-        <li><%= link_to 'Sign Up', users_new_path %></li>
-        <li><%= link_to 'Login'%></a></li>
       </ul>
     </div>
   </div>
@@ -37,25 +29,31 @@
 
   <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h3 class="margin">What we do</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <h1 class="title fadein">StyleWrite</h1>
+  <h3 class="margin fadein">What we do</h3>
+    <blockquote class="quote fadein">
+    <p>"Write drunk, edit sober"</p>
+    <medium><cite title="Source Title"></cite>-Ernest Hemingway </medium>
+    </blockquote>
+  <p class="fadein">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
   <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
-  <h3 class="margin">Who Are We?</h3>
-  <h3>Your Writing Styler</h3>
+  <h3 class="margin fadein">Who Are We?</h3>
+  <h3 class="fadein">Your Writing Styler</h3>
 </div>
 
   <!-- Third Container (Grid) -->
 <div class="container-fluid bg-3 text-center">
-  <h3 class="margin">Features Coming Soon!</h3><br>
+  <h3 class="margin fadein">Features Coming Soon!</h3><br>
   <div class="row">
     <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <img src=".images/camera.png" alt="Cam" class="img-circle">
+      <p class="fadein">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
     <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      <p class="fadein">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     </div>
     <div class="col-sm-4">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
