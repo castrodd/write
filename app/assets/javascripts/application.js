@@ -13,3 +13,29 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+// $(window).scroll(function() {
+// if ($(this).scrollTop()> 100) {
+// $('.fadein').fadeIn();
+// } else {
+// $('.fadein').fadeOut();
+// }
+// });
+
+$(function(){
+	$(window).scroll( function(){
+
+		var bottom_of_window = $(window).scrollTop() + $(window).height();
+		//fade-in
+		$('.fadein').each(function(){
+			var bottom_of_object = $(this).position().top + $(this).outerHeight();
+			 if( bottom_of_window > bottom_of_object ){
+				$(this).addClass('showing');
+			}
+			else{
+				$(this).removeClass('showing');
+			}
+		});
+
+	});
+});
