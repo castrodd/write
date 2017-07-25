@@ -1,37 +1,40 @@
-<!-- Modal -->
 <div class="modal fade" id="<%= document.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Create Document</h4>
+        <h4 class="modal-title" id="myModalLabel"><%= document.title %></h4>
       </div>
+
       <div class="modal-body">
         <p id="notice"><%= notice %></p>
 
         <p>
-          <strong>Title:</strong>
-          <%= document.title %>
-        </p>
-
-        <p>
-          <strong>Content:</strong>
+          <!--<strong>Content:</strong>
           <%= document.content %>
-        </p>
+        </p>-->
+
+        <p><strong>Your Tips</strong></p>
 
         <p>
-          <strong>Tips:</strong>
-          <br>
-          <% tips = document.review %>
-          <% if tips %>
-            <% tips.keys.each do |t| %>
+          <% if document.review.nil? %>
+             <p>None At This Time.
+             Everything Looks Good!</p>
+          <% else %>
+
+            <br>
+            <% tips = document.review %>
+            <% if tips %>
+              <% tips.keys.each do |t| %>
               <%= t.upcase %>: <em><%= tips[t] %></em>
-          <br>
+            <br>
+            <br>
+              <% end %>
             <% end %>
           <% end %>
         </p>
 
-        <%= link_to 'Edit', edit_document_path(document) %> |
+        <!--<%= link_to 'Edit', edit_document_path(document) %> -->
         <%= link_to 'Back', documents_path %>
       </div>
     </div>
