@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to documents_path, notice: 'Created Account'
     else
-      render :new
+      render "welcome/index"
     end
 
     def show
