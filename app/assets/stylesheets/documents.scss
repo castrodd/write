@@ -7,20 +7,45 @@
 //   background-size: cover;
 // }
 
-.welcome-back {
-  color: white;
+//.welcome-back {
+
+//}
+
+th {
+  border-bottom: 0 !important;
+  padding-right: 15em !important;
 }
 
-table {
-  color: white;
+.table {
+  display: block;
+  table-layout: fixed;
+  margin-left: 20px;
 }
 
-.class1 {
+/*.class1 {
   background-image: url(/images/computercoffee.png);
   background-size: cover;
   background-repeat: no-repeat;
-}
+}*/
 
 .modal-title #myModalLabel {
   background-color: gray;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding: 0;
+}
+
+tr {
+  width: 970px !important;
 }

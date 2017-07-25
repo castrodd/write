@@ -29,7 +29,10 @@
 
 <h1 class="welcome-back">Welcome back, <%= @user.username %>!</h1>
 
-<table>
+<div class="container">
+  <h2>Your Work</h2>
+
+  <table class="table table-condensed">
   <thead>
     <tr>
       <th>Title</th>
@@ -42,7 +45,11 @@
     <% @documents.each do |document| %>
       <tr>
         <td><%= document.title %></td>
-        <td><%= document.content %></td>
+        <% if document.content.length > 75 %>
+          <td><%= document.content[0,75] %>...</td>
+        <% else %>
+          <td><%= document.content %></td>
+        <% end %>
         <td><%= link_to 'Show', '#', :'data-toggle'=>"modal", :'data-target'=>"##{document.id}" %></td>
         <td><%= link_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
