@@ -9,11 +9,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+
       <a class="navbar-brand" href="#">StyleWrite</a>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <!-- <ul class="nav navbar-nav"> </ul> -->
         <ul class="nav navbar-nav navbar-right">
+
         </ul>
       </div>
     </div>
@@ -31,7 +33,10 @@
 
 <h1 class="welcome-back">Welcome back, <%= @user.username %>!</h1>
 
-<table>
+<div class="container">
+  <h2>Your Work</h2>
+
+  <table class="table table-condensed">
   <thead>
     <tr>
       <th>Title</th>
@@ -44,9 +49,13 @@
     <% @documents.each do |document| %>
       <tr>
         <td><%= document.title %></td>
-        <td><%= document.content %></td>
-        <td><%= link_to 'Show', '#', :'data-toggle'=>"modal", :'data-target'=>"##{document.id}" %></td>
-        <td><%= link_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if document.content.length > 75 %>
+          <td><%= document.content[0,75] %>...</td>
+        <% else %>
+          <td><%= document.content %></td>
+        <% end %>
+        <td><button class="btn btn-outline-primary"><%= link_to 'Show', '#', :'data-toggle'=>"modal", :'data-target'=>"##{document.id}" %></button></td>
+        <td><button class="btn btn-outline-primary"><%= link_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
         <%= render partial: 'show', locals: { document: document} %>
     <% end %>
@@ -55,6 +64,6 @@
 
 <br>
 
-<%= link_to 'Create Document', '#', :'data-toggle'=>"modal", :'data-target'=>"#documentModal" %>
+<button class="btn btn-primary btn-lg btn-block"<%= link_to 'Stylize Document', '#', :'data-toggle'=>"modal", :'data-target'=>"#documentModal" %></button>
 
 <%= render partial: 'form', locals: {user: @user, new_document: @new_document} %>
