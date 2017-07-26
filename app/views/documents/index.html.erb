@@ -50,8 +50,8 @@
         <% else %>
           <td><%= document.content %></td>
         <% end %>
-        <td><%= link_to 'Show', '#', :'data-toggle'=>"modal", :'data-target'=>"##{document.id}" %></td>
-        <td><%= link_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button class="btn btn-outline-primary"><%= link_to 'Show', '#', :'data-toggle'=>"modal", :'data-target'=>"##{document.id}" %></button></td>
+        <td><button class="btn btn-outline-primary"><%= link_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
         <%= render partial: 'show', locals: { document: document} %>
     <% end %>
@@ -60,6 +60,6 @@
 
 <br>
 
-<%= link_to 'Create Document', '#', :'data-toggle'=>"modal", :'data-target'=>"#documentModal" %>
+<button class="btn btn-primary btn-lg btn-block"<%= link_to 'Stylize Document', '#', :'data-toggle'=>"modal", :'data-target'=>"#documentModal" %></button>
 
 <%= render partial: 'form', locals: {user: @user, new_document: @new_document} %>
