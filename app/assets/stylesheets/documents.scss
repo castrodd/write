@@ -7,20 +7,26 @@
 //   background-size: cover;
 // }
 
+html {
+  height: 100%;
+}
+
 .welcome-back {
-  color: white;
+  color: black;
 }
 
 table {
-  color: white;
+  color: black;
 }
 
 .class1 {
-  background-image: url(/images/computercoffee.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.modal-title #myModalLabel {
-  background-color: gray;
+  // background-image: url(/images/computercoffee.png);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+    background-size: cover;
+    // background: #0B3C5D; /* For browsers that do not support gradients */
+    // background: -webkit-linear-gradient(#0B3C5D, #328CC1); /* For Safari 5.1 to 6.0 */
+    // background: -o-linear-gradient(#0B3C5D, #328CC1); /* For Opera 11.1 to 12.0 */
+    // background: -moz-linear-gradient(#0B3C5D, #328CC1); /* For Firefox 3.6 to 15 */
+    // background: linear-gradient(#0B3C5D, #328CC1); /* Standard syntax (must be last) */
 }

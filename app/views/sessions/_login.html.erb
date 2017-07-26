@@ -1,7 +1,7 @@
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content window">
-      <div class="modal-header">
+      <div class="modal-header views">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Welcome back!</h4>
       </div>
@@ -9,29 +9,20 @@
         <%= notice %>
 
         <h1>Log in</h1>
-        <%# form_tag sessions_path do %>
         <%= form_tag welcome_index_path do %>
 
         <p>
-
           <%= label_tag :username %>
-
           <%= text_field_tag :username %>
-
         </p>
 
         <p>
-
           <%= label_tag :password %>
-
           <%= password_field_tag :password %>
-
         </p>
 
         <p>
-
           <%= submit_tag 'Log in' %>
-
         </p>
 
         <% end %>
