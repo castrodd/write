@@ -11,28 +11,33 @@
   background-attachment: scroll;
   padding-top: 70px;
   padding-bottom: 70px;
+  height: 550px;
 }
 
 .bg-2 {
-  color: white;
-  background-image: url(/images/desk-and-typewriter.jpg);
+  color: #1D2731;
+  background-color: white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   padding-top: 70px;
-  padding-bottom: 70px;
+  // padding-bottom: 70px;
 }
 
 .bg-3 {
   color: white;
-  background-image: url(/images/typewriterbw.jpg);
+  background-color: #0B3C5D;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
   padding-top: 70px;
   padding-bottom: 70px;
+}
+
+.img-circle {
+  background-color: #328CC1
 }
 
 .fadein {
@@ -42,7 +47,6 @@
 
 .margin {
   font-size: 50px;
-  margin-bottom: 400px;
 }
 
 @keyframes fadeInDown {
@@ -59,6 +63,8 @@
 .top-navigation {
   margin: 0;
   border-radius: 0;
+  background-color: #0B3C5D;
+  border-color: #0B3C5D;
 }
 
 .title {
@@ -66,7 +72,6 @@
 }
 
 .quote {
-  font-size: 40;
-  color: #503e3e;
+  color: white;
   border-left: none;
 }
