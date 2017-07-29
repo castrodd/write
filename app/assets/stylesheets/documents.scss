@@ -2,12 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// .user-documents {
-//   background-image: url(computercoffee.png);
-//   background-size: cover;
-// }
-
-
 html {
   height: 100%;
 }
@@ -20,11 +14,6 @@ table {
   color: black;
 }
 
-
-//.welcome-back {
-
-//}
-
 th {
   border-bottom: 0 !important;
   padding-right: 15em !important;
@@ -33,14 +22,29 @@ th {
 .table {
   display: block;
   table-layout: fixed;
-  margin-left: 20px;
+  white-space:nowrap;
+  display: inline-grid;
 }
 
-/*.class1 {
-  background-image: url(/images/computercoffee.png);
+.table-striped {
+  margin-left: 8%;
+  margin-bottom: 0;
+  background-color: rgba(95, 100, 119, 0.7);
+  background-size: cover;
+}
+
+.btn-block {
+  margin-left: 8%;
+  width: 83%;
+}
+
+.class1 {
+  background-image: url(/images/students.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-}*/
+  position: relative;
+
+}
 
 .modal-title #myModalLabel {
   background-color: gray;
