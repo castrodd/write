@@ -26,21 +26,20 @@
 </nav>
 
 <% tips = @document.review %>
-<% doc = @document.content.split %>
-<% index = 0 %>
+<% doc = @document.content %>
 
 <div class="boxes">
   <div id="left">
     <h2> Document </h2>
     <div class="left-box">
     <% if !(tips.nil?) %>
-     <% doc.each do |word| %>
-       <% if tips.keys.include?(word) %>
-         <% doc[index] = "<mark class='doc' id='#{word}'>#{word}</mark>" %>
+     <% tips.keys.each do |tip| %>
+       <% if doc.include?(tip) %>
+         <% id = tip.gsub(/\s/, '') %>
+         <% doc.sub!(tip, "<mark class='doc' id='#{id}'>#{tip}</mark>") %>
        <% end %>
-       <% index += 1 %>
      <% end %>
-     <% @str = doc.join(' ').html_safe %>
+     <% @str = doc.html_safe %>
      <article> <%= @str %> </article>
     <% else %>
       <article><%= @document.content %>
@@ -49,18 +48,19 @@
   </div>
 
   <div id="right">
-      <h2> Tips </h2>
-      <div class="right-box">
-      <% if !(tips.nil?) %>
-       <% tips.keys.each do |tip| %>
-         <% tip1 = tip.split('-').join(' ') %>
-         <% @insert = "<p class='tip' id='#{tip}'> #{tip1.upcase} : <br> #{ tips[tip]} </p>" %>
-         <%= @insert.html_safe %>
-         <br>
-       <% end %>
-      <% else %>
-       <p> Nothing To See Here! </p>
-      <% end %>
-    </div>
+
+    <h2> Tips </h2>
+    <ul id="list">
+    <% if !(tips.nil?) %>
+     <% tips.keys.each do |tip| %>
+
+       <% @insert = "<li><p class='tip' id='#{tip.gsub(/\s/, '')}'> #{tip.upcase} : <br> #{ tips[tip]} </p></li>" %>
+       <%= @insert.html_safe %>
+       <br>
+     <% end %>
+    <% else %>
+     <p> Nothing To See Here! </p>
+    <% end %>
+    </ul>
   </div>
 </div>

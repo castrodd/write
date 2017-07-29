@@ -80,9 +80,8 @@ class DocumentsController < ApplicationController
     def document_params
       docparams = params.require(:document).permit(:title, :content, :user_id, :review).to_h
       if docparams[:content].blank? && params[:document].present?
-
-        docparams[:content] = Docx::Document.open(params[:document][:file].tempfile).to_s
+        docparams[:content] = Docx::Document.open(params[:document][:file].tempfile).to_s unless params[:document][:file].nil?
       end
-        docparams
+      docparams
     end
 end

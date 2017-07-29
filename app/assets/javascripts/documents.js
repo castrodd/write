@@ -4,9 +4,12 @@
 $(document).on('turbolinks:load', function() {
   $('mark').click(function() {
     var id = $(this).attr('id');
-    if ($('p#'+id).attr('style') !== "background-color: yellow;") {
+    var thing = 'p#'+id;
+    if ($(thing).attr('style') !== "background-color: yellow;") {
       $('p').css("background-color", "white");
-      $('p#'+id).css("background-color", "yellow");
+      $(thing).css("background-color", "yellow");
+      //$(thing).parent().before("#list p:first");
+      $('ul#list').prepend($(thing));
     } else {
       $('p').css("background-color", "white");
     }

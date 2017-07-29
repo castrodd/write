@@ -87,12 +87,12 @@ person" or "any single thing."'
     end
   end
 
-#   def as_good(str, obj)
-#     if str.include?('as good or better than')
-#       obj['as-good-or-better-than'] = 'Expressions of this type should be corrected by rearranging the
-# sentences.'
-#     end
-#   end
+  def as_good(str, obj)
+    if str.include?('as good or better than')
+      obj['as good or better than'] = 'Expressions of this type should be corrected by rearranging the
+sentences.'
+    end
+  end
 
   def as_to(str, obj)
     if str.include?('as to whether')
@@ -280,8 +280,8 @@ when used to express bigness.'
   end
 
   def etc(str, obj)
-    if str.include?('etc.')
-      obj['etc.'] = 'Literally, "and other things"; sometimes loosely used to mean "and other persons."
+    if str.include?('etc')
+      obj['etc'] = 'Literally, "and other things"; sometimes loosely used to mean "and other persons."
 The phrase is equivalent to and the rest, and so forth, and hence is not to be used if one of
 these would be insufficient — that is, if the reader would be left in doubt as to any
 important particulars. Least open to objection when it represents the last terms of a list
