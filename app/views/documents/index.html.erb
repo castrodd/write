@@ -1,6 +1,6 @@
 <% content_for :body_class, 'class1' %>
 
-<nav class="navbar navbar-default top-navigation">
+<nav class="navbar navbar-default doc-navigation">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -34,9 +34,8 @@
 <h1 class="welcome-back">Welcome back, <%= @user.username %>!</h1>
 
 <div class="container">
-  <h2>Your Work</h2>
 
-  <table class="table-condensed table-striped table-hover">
+  <table class="table-condensed table-hover">
   <thead>
     <tr>
       <th>Title</th>
@@ -54,8 +53,8 @@
         <% else %>
           <td><%= document.content %></td>
         <% end %>
-        <td><button class="btn btn-outline-primary"><%= link_to 'Show', document_path(document) %></button></td>
-        <td><button class="btn btn-outline-primary"><%= link_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        <td><button class="btn btn-outline btn-show"><%= link_to 'Show', document_path(document) %></button></td>
+        <td><button class="btn btn-outline btn-danger"><%= link_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
         <%= render partial: 'show', locals: { document: document} %>
     <% end %>
