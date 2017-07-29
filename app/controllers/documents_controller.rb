@@ -30,7 +30,6 @@ class DocumentsController < ApplicationController
   # POST /documents.json
   def create
     @document = current_user.documents.new(document_params)
-
     # Here we scan the document's contents with our 'rules'
     # Save the results in a hash and store the hash as an attribute of document
     @document.review = {}
@@ -79,6 +78,11 @@ class DocumentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def document_params
-      params.require(:document).permit(:title, :content, :user_id, :review)
+      docparams = params.require(:document).permit(:title, :content, :user_id, :review).to_h
+      if docparams[:content].blank? && params[:document].present?
+
+        docparams[:content] = Docx::Document.open(params[:document][:file].tempfile).to_s
+      end
+        docparams
     end
 end
