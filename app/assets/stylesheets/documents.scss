@@ -93,14 +93,16 @@ textarea {
 }
 
 .boxes #left {
-  border-right: 1px black solid;
+  //border-right: 1px black solid;
   width: 576px;
   padding: 1em;
 }
 
 #right {
+  height: 100%;
   width: 576px;
   padding: 1em;
+  border-left: 1px black solid;
 }
 
 mark {

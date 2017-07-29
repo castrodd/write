@@ -4,8 +4,11 @@
 $(document).on('turbolinks:load', function() {
   $('mark').click(function() {
     var id = $(this).attr('id');
-    $('p').css("background-color", "white");
-    $('p#'+id).css("background-color", "yellow");
-
+    if ($('p#'+id).attr('style') !== "background-color: yellow;") {
+      $('p').css("background-color", "white");
+      $('p#'+id).css("background-color", "yellow");
+    } else {
+      $('p').css("background-color", "white");
+    }
   })
 })

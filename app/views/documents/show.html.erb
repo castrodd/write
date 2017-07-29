@@ -11,14 +11,12 @@
       <a class="navbar-brand" href="#">StyleWrite</a>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <!-- <ul class="nav navbar-nav"> </ul> -->
         <ul class="nav navbar-nav navbar-right">
         </ul>
       </div>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <!-- <ul class="nav navbar-nav"> </ul> -->
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Back', documents_path %></li>
         <li><%= link_to 'Log out', logout_path %></li>
@@ -27,14 +25,38 @@
   </div>
 </nav>
 
+<% tips = @document.review %>
+<% doc = @document.content.split %>
+<% index = 0 %>
+
 <div class="boxes">
   <div id="left">
     <h2> Document </h2>
-    <article>This is an <mark class='doc' id="essay">essay</mark>. It took a <mark class="doc" id="long">long</mark> time to write.</article></p>
+    <% if !(tips.nil?) %>
+     <% doc.each do |word| %>
+       <% if tips.keys.include?(word) %>
+         <% doc[index] = "<mark class='doc' id='#{word}'>#{word}</mark>" %>
+       <% end %>
+       <% index += 1 %>
+     <% end %>
+     <% @str = doc.join(' ').html_safe %>
+     <article> <%= @str %> </article>
+    <% else %>
+      <article><%= @document.content %>
+    <% end %>
   </div>
+
   <div id="right">
     <h2> Tips </h2>
-    <p class="tip" id="essay">This is a critique</p>
-    <p class="tip" id="long">This is another critique.</p>
+    <% if !(tips.nil?) %>
+     <% tips.keys.each do |tip| %>
+       <% tip1 = tip.split('-').join(' ') %>
+       <% @insert = "<p class='tip' id='#{tip}'> #{tip1.upcase} : <br> #{ tips[tip]} </p>" %>
+       <%= @insert.html_safe %>
+       <br>
+     <% end %>
+    <% else %>
+     <p> Nothing To See Here! </p>
+    <% end %>
   </div>
 </div>

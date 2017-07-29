@@ -8,7 +8,7 @@ RSpec.feature "user visits landing page", type: :feature do
 
   scenario "clicks link to sign in" do
     visit root_path
-    expect(page).to have_link 'Sign In'
+    expect(page).to have_link 'Login'
   end
 
   scenario "clicks link to sign up" do

@@ -7,14 +7,9 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sign Up <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><%= link_to 'Sign In', '#', :'data-toggle'=> "modal", :'data-target'=>"#loginModal" %></li>
-            <li class="divider"></li>
-            <li><%= link_to 'Sign Up', '#', :'data-toggle'=> "modal", :'data-target'=>"#myModal123" %></li>
-          </ul>
-        </li>
+
+        <button type="button" name="button" id="Login"> <li><%= link_to 'Sign Up', '#', :'data-toggle'=> "modal", :'data-target'=>"#myModal123" %></li></button>
+
       </ul>
     </div>
   </div>
@@ -38,17 +33,17 @@
     <div class="col-sm-4">
       <img src="images/pencil.png"  style="display:inline" alt="Camera" width="100">
       <h4 class="fadein subtitle">Create engaging content<br> for your readers</h4>
-      <h6 class="fadein">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h6>
+    <!--  <h6 class="fadein">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h6>-->
     </div>
     <div class="col-sm-4">
       <img src="images/lightbulb.png" style="display:inline" alt="Camera" height="100">
       <h4 class="fadein subtitle">Discover better<br> writing techniques</h4>
-      <h6 class="fadein">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h6>
+    <!--  <h6 class="fadein">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h6>-->
     </div>
     <div class="col-sm-4">
       <img src="images/book.png" style="display:inline" alt="Camera" width="100">
       <h4 class="fadein subtitle">Hone your skills<br> as a writer</h4>
-      <h6 class="fadein">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h6>
+      <!--<h6 class="fadein">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h6>-->
     </div>
   </div>
 </div>
@@ -59,7 +54,7 @@
 </div>
 
 <div class="container-fluid text-center" id="copyright">
-    <h6>2017 WYNCODE/STYLEWRYTE,INC</h6>
+    <h6>2017 WYNCODE/STYLEWRITE, INC</h6>
 </div>
 
 <%= render partial: 'sessions/login' %>
