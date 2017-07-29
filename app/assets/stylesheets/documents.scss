@@ -2,58 +2,73 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+  font-family: Roboto !important;
+}
+
 html {
   height: 100%;
 }
 
+.doc-navigation {
+  margin: 0;
+  border-radius: 0;
+  background-color: rgb(13, 65, 130);
+  border-color: rgb(13, 65, 130);
+}
+
 .welcome-back {
   color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  font-size: 50px;
 }
 
 table {
   color: black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 th {
   border-bottom: 0 !important;
   padding-right: 15em !important;
+  font-size: 1.5em;
 }
 
-.table {
-  display: block;
-  table-layout: fixed;
-  white-space:nowrap;
-  display: inline-grid;
-}
-
-.table-striped {
-  margin-left: 8%;
+.table-hover {
+  // margin-left: 8%;
   margin-bottom: 0;
-  background-color: rgba(95, 100, 119, 0.7);
+  background-color: white;
+  border-radius: 15px;
+  // background-color: rgba(13, 65, 130, 0.75);
   background-size: cover;
 }
 
 .btn-block {
-  margin-left: 8%;
-  width: 83%;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn-show {
+  background-color: #e89d00;
 }
 
 .class1 {
-  background-image: url(/images/students.jpg);
+  // background-image: url(/images/students.jpg);
+  background-color: #edeef0;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-
 }
 
 .modal-title #myModalLabel {
   background-color: gray;
 
-}
-
-h1 {
-  display: flex;
-  justify-content: center;
 }
 
 h2 {
@@ -78,7 +93,7 @@ tr {
   display: table-caption !important;
 }
 
-div .actions {
+.actions {
   margin-left: 7em !important;
 }
 
@@ -103,7 +118,7 @@ textarea {
 }
 
 #right {
-  height: 100%;
+  height: 2000px;
   width: 576px;
   padding: 1em;
   border-left: 1px black solid;
