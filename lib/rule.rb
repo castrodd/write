@@ -87,12 +87,12 @@ person" or "any single thing."'
     end
   end
 
-#   def as_good(str, obj)
-#     if str.include?('as good or better than')
-#       obj['as-good-or-better-than'] = 'Expressions of this type should be corrected by rearranging the
-# sentences.'
-#     end
-#   end
+  def as_good(str, obj)
+    if str.include?('as good or better than')
+      obj['as good or better than'] = 'Expressions of this type should be corrected by rearranging the
+sentences.'
+    end
+  end
 
   def as_to(str, obj)
     if str.include?('as to whether')
