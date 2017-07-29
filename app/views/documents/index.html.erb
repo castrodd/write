@@ -54,7 +54,7 @@
         <% else %>
           <td><%= document.content %></td>
         <% end %>
-        <td><button class="btn btn-outline-primary"><%= link_to 'Show', '#', :'data-toggle'=>"modal", :'data-target'=>"##{document.id}" %></button></td>
+        <td><button class="btn btn-outline-primary"><%= link_to 'Show', document_path(document) %></button></td>
         <td><button class="btn btn-outline-primary"><%= link_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
         <%= render partial: 'show', locals: { document: document} %>

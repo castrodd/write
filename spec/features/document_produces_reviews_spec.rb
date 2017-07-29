@@ -9,7 +9,7 @@ RSpec.feature "document produces reviews", type: :feature do
     fill_in "Password", id:'user_password', with: "Confidential"
     fill_in "Password confirmation", id:'user_password_confirmation', with: "Confidential"
     click_button "Create Account"
-    click_link 'Create Document'
+    click_button 'Stylize Document'
     fill_in 'document_title', with: "My Awesome Essay"
     fill_in 'document_content', with: "His tweets created an allusion of reality. Perhaps they were only meant to aggravate. Is that allright?"
     click_button 'Stylize'

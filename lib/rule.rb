@@ -2,14 +2,16 @@ module Rule
 
   def aggravate(str, obj)
     if str.include?('aggravate') || str.include?('irritate')
-      obj['aggravate/irritate'] = 'The first means "to add to" an already troublesome or vexing matter or
-condition. The second means "to vex" or "to annoy" or "to chafe."'
+      obj['aggravate'] = 'Aggravate means "to add to" an already troublesome or vexing matter or
+condition. Irritate means "to vex" or "to annoy" or "to chafe."'
+      obj['irritate'] = 'Aggravate means "to add to" an already troublesome or vexing matter or
+condition. Irritate means "to vex" or "to annoy" or "to chafe."'
     end
   end
 
   def allright(str, obj)
-    if str.include?('all right') || str.include?('allright')
-      obj['all right'] = 'Idiomatic in familiar speech as a detached phrase in the sense "Agreed," or "Go
+    if str.include?('allright')
+      obj['allright'] = 'Idiomatic in familiar speech as a detached phrase in the sense "Agreed," or "Go
 ahead," or "O.K." Properly written as two words — all right.'
     end
   end
@@ -31,8 +33,13 @@ a specific one.'
 
   def alternate(str, obj)
     if str.include?('alternate') || str.include?('alternative')
-      obj['alternate/alternative'] = ' The words are not always interchangeable as nouns or adjectives.
-The first means every other one in a series; the second, one of two possibilities. As the
+      obj['alternate'] = 'The words are not always interchangeable as nouns or adjectives.
+Alternate means every other one in a series; alternative, one of two possibilities. As the
+other one of a series of two, an alternate may stand for "a substitute," but an alternative,
+although used in a similar sense, connotes a matter of choice that is never present with
+alternate.'
+     obj['alternative'] = 'The words are not always interchangeable as nouns or adjectives.
+Alternate means every other one in a series; alternative, one of two possibilities. As the
 other one of a series of two, an alternate may stand for "a substitute," but an alternative,
 although used in a similar sense, connotes a matter of choice that is never present with
 alternate.'
@@ -41,19 +48,23 @@ alternate.'
 
   def among(str, obj)
     if str.include?('among') || str.include?('between')
-      obj['among/between'] = 'When more than two things or persons are involved, among is usually
+      obj['among'] = 'When more than two things or persons are involved, among is usually
+called for: "The money was divided among the four players." When, however, more than
+two are involved but each is considered individually, between is preferred: "an agreement
+between the six heirs."'
+      obj['between'] = 'When more than two things or persons are involved, among is usually
 called for: "The money was divided among the four players." When, however, more than
 two are involved but each is considered individually, between is preferred: "an agreement
 between the six heirs."'
     end
   end
 
-  def and(str, obj)
-    if str.include?('and/or')
-      obj['and/or'] = 'A device, or shortcut, that damages a sentence and often leads to confusion or
-ambiguity.'
-    end
-  end
+#   def and(str, obj)
+#     if str.include?('and/or')
+#       obj['and-or'] = 'A device, or shortcut, that damages a sentence and often leads to confusion or
+# ambiguity.'
+#     end
+#   end
 
   def anticipate(str, obj)
     if str.include?('anticipate')
@@ -76,12 +87,12 @@ person" or "any single thing."'
     end
   end
 
-  def as_good(str, obj)
-    if str.include?('as good or better than')
-      obj['as good or better than'] = 'Expressions of this type should be corrected by rearranging the
-sentences.'
-    end
-  end
+#   def as_good(str, obj)
+#     if str.include?('as good or better than')
+#       obj['as-good-or-better-than'] = 'Expressions of this type should be corrected by rearranging the
+# sentences.'
+#     end
+#   end
 
   def as_to(str, obj)
     if str.include?('as to whether')
@@ -145,7 +156,7 @@ worse in writing.'
 
   def claim(str, obj)
     if str.include?('claim')
-      obj['claim (verb)'] = 'Means "lay claim to." Not to be used as a substitute for declare, maintain,
+      obj['claim'] = 'Means "lay claim to." Not to be used as a substitute for declare, maintain,
 or charge.'
     end
   end
