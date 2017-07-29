@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Back', documents_path %></li>
-        <li><%= link_to 'Log out', logout_path %></li>
+        <li><%= link_to 'Log out 2', logout_path %></li>
       </ul>
     </div>
   </div>
@@ -32,6 +32,7 @@
 <div class="boxes">
   <div id="left">
     <h2> Document </h2>
+    <div class="left-box">
     <% if !(tips.nil?) %>
      <% doc.each do |word| %>
        <% if tips.keys.include?(word) %>
@@ -44,19 +45,22 @@
     <% else %>
       <article><%= @document.content %>
     <% end %>
+    </div>
   </div>
 
   <div id="right">
-    <h2> Tips </h2>
-    <% if !(tips.nil?) %>
-     <% tips.keys.each do |tip| %>
-       <% tip1 = tip.split('-').join(' ') %>
-       <% @insert = "<p class='tip' id='#{tip}'> #{tip1.upcase} : <br> #{ tips[tip]} </p>" %>
-       <%= @insert.html_safe %>
-       <br>
-     <% end %>
-    <% else %>
-     <p> Nothing To See Here! </p>
-    <% end %>
+      <h2> Tips </h2>
+      <div class="right-box">
+      <% if !(tips.nil?) %>
+       <% tips.keys.each do |tip| %>
+         <% tip1 = tip.split('-').join(' ') %>
+         <% @insert = "<p class='tip' id='#{tip}'> #{tip1.upcase} : <br> #{ tips[tip]} </p>" %>
+         <%= @insert.html_safe %>
+         <br>
+       <% end %>
+      <% else %>
+       <p> Nothing To See Here! </p>
+      <% end %>
+    </div>
   </div>
 </div>

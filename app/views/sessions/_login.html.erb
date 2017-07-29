@@ -8,7 +8,7 @@
       <div class="modal-body">
         <%= notice %>
 
-        <h1>Log in</h1>
+        <h3>Login Into Your Account</h3>
         <%= form_tag welcome_index_path do %>
 
         <p>
@@ -24,10 +24,14 @@
         <p>
 
 
-          <div class="logger"><%= submit_tag 'Log in' %></div>
+          <div class="logger" ><%= submit_tag 'Log in', :class => 'Login2'%></div>
 
 
         </p>
+
+        <div class="">
+          <a href="#">Don't have an account? Sign Up!</a>
+        </div>
 
         <% end %>
 
