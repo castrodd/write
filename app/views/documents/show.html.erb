@@ -1,4 +1,6 @@
-<nav class="navbar navbar-default top-navigation">
+<% content_for :body_class, 'class1' %>
+
+<nav class="navbar navbar-default doc-navigation">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -8,18 +10,21 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="#">StyleWrite</a>
+      <%= link_to image_tag("StyleWryte.png", width: "100",id: "logo"), edit_sessions_path %>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- <ul class="nav navbar-nav"> </ul> -->
         <ul class="nav navbar-nav navbar-right">
+
         </ul>
       </div>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!-- <ul class="nav navbar-nav"> </ul> -->
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Back', documents_path %></li>
-        <li><%= link_to 'Log out 2', logout_path %></li>
+        <li><%= link_to 'Log out', logout_path %></li>
       </ul>
     </div>
   </div>
@@ -50,6 +55,7 @@
   <div id="right">
 
     <h2> Tips </h2>
+    <div class="right-box">
     <ul id="list">
     <% if !(tips.nil?) %>
      <% tips.keys.each do |tip| %>
@@ -62,5 +68,6 @@
      <p> Nothing To See Here! </p>
     <% end %>
     </ul>
+    </div>
   </div>
 </div>
