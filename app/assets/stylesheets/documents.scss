@@ -80,9 +80,10 @@ h2 {
 .container {
   padding: 0px;
 }
-
-tr {
-  // width: 970px !important;
+.welcome-table{
+  .welcome-row td {
+    padding: 20px;
+  }
 }
 
 .btn a {
@@ -110,12 +111,12 @@ textarea {
   flex-direction: row;
   width: 100%;
   height: 100%;
-  position: absolute;
+  justify-content: center;
 }
 
 .left-box{
   height: 500px;
-  width: 110%;
+  width: 100%;
   padding: 10px;
   // border:1px solid #ccc;
   font:16px/26px Georgia, Garamond, Serif;
@@ -135,7 +136,7 @@ textarea {
 .right-box{
   margin-left: 20px;
   height: 500px;
-  width: 110%;
+  width: 100%;
   padding: 10px;
   // border:1px solid #ccc;
   font:16px/26px Georgia, Garamond, Serif;
