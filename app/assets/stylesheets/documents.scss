@@ -31,9 +31,10 @@ table {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.table-title{
+  padding: 20px;
+}
 th {
-  border-bottom: 0 !important;
-  padding-right: 15em !important;
   font-size: 1.5em;
 }
 
@@ -41,7 +42,7 @@ th {
   // margin-left: 8%;
   margin-bottom: 0;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 5px;
   // background-color: rgba(13, 65, 130, 0.75);
   background-size: cover;
 }
@@ -77,11 +78,11 @@ h2 {
 }
 
 .container {
-  padding: 0;
+  padding: 0px;
 }
 
 tr {
-  width: 970px !important;
+  // width: 970px !important;
 }
 
 .btn a {
@@ -89,12 +90,13 @@ tr {
 }
 
 .new-modal-body {
-  margin-left: 13em !important;
-  display: table-caption !important;
+  // margin-left: 13em !important;
+  // display: table-caption !important;
+  padding: 30px;
 }
 
 .actions {
-  margin-left: 7em !important;
+  // margin-left: 7em !important;
 }
 
 textarea {
@@ -112,8 +114,8 @@ textarea {
 }
 
 .left-box{
-  height: 90%;
-  width: 570px;
+  height: 500px;
+  width: 110%;
   padding: 10px;
   // border:1px solid #ccc;
   font:16px/26px Georgia, Garamond, Serif;
@@ -132,8 +134,8 @@ textarea {
 }
 .right-box{
   margin-left: 20px;
-  height: 90%;
-  width: 570px;
+  height: 500px;
+  width: 110%;
   padding: 10px;
   // border:1px solid #ccc;
   font:16px/26px Georgia, Garamond, Serif;
@@ -142,7 +144,7 @@ textarea {
 }
 
 #right {
-  height: 2000px;
+  // height: 2000px;
   width: 576px;
   padding: 2em;
 }
@@ -153,4 +155,8 @@ mark {
 
 ul {
   list-style-type: none;
+}
+
+.d-block {
+  display: block;
 }

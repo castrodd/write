@@ -20,17 +20,17 @@
             </div>
           <% end %>
 
-          <div class="field">
+          <div class="form-group col-xs-12">
             <%= form.label :title %>
-            <%= form.text_field :title, id: :document_title, :placeholder => "   Your Essay's Title"  %>
+            <%= form.text_field :title, id: :document_title, :placeholder => "   Your Essay's Title", class: 'form-control' %>
           </div>
 
-          <div class="field">
-            <%= form.label :content %>
-            <%= form.text_area :content, id: :document_content, :placeholder => "   Copy + Paste (Or Upload)" %>
+          <div class="form-group col-xs-12">
+            <%= form.label :content, class: 'd-block'%>
+            <%= form.text_area :content, id: :document_content, :placeholder => "Copy + Paste (Or Upload)", class: 'form-control' %>
           </div>
 
-          <div class="field">
+          <div class="form-group col-xs-12">
             <%= form.label :file %>
             <%= form.file_field :file, id: :document_content %>
           </div>

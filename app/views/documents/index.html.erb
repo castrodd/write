@@ -10,7 +10,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="#">StyleWrite</a>
+      <%= link_to image_tag("StyleWryte.png", width: "100",id: "logo"), edit_sessions_path %>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <!-- <ul class="nav navbar-nav"> </ul> -->
@@ -34,19 +34,23 @@
 <h1 class="welcome-back">Welcome back, <%= @user.username %>!</h1>
 
 <div class="container">
-
-  <table class="table-condensed table-hover">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @documents.each do |document| %>
+  <div class="col-sm-6" style="padding: 0; margin-bottom: 20px;">
+    <input type="text" class="form-control" id="myInput" onkeyup="search()" placeholder="Search for title.." title="Type in a name">
+  </div>
+  <div class="col-sm-6">
+    <button class="btn btn-primary style-button"<%= link_to 'Stylize Document', '#', :'data-toggle'=>"modal", :'data-target'=>"#documentModal" %></button>
+  </div>
+  <table class="table-condensed table-hover col-xs-12">
+    <thead>
       <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  <tbody id="mytb">
+    <% @documents.each do |document| %>
+      <tr class="welcome-row">
         <td><%= document.title %></td>
         <% if document.content.length > 75 %>
           <td><%= document.content[0,75] %>...</td>
@@ -56,13 +60,12 @@
         <td><button class="btn btn-outline btn-show"><%= link_to 'Show', document_path(document) %></button></td>
         <td><button class="btn btn-outline btn-danger"><%= link_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
-        <%= render partial: 'show', locals: { document: document} %>
+      <%= render partial: 'show', locals: { document: document} %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<button class="btn btn-primary btn-lg btn-block"<%= link_to 'Stylize Document', '#', :'data-toggle'=>"modal", :'data-target'=>"#documentModal" %></button>
 
 <%= render partial: 'form', locals: {user: @user, new_document: @new_document} %>
