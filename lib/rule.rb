@@ -1,44 +1,44 @@
 module Rule
 
   def aggravate(str, obj)
-    if str.include?('aggravate') || str.include?('irritate')
-      obj['aggravate'] = 'Aggravate means "to add to" an already troublesome or vexing matter or
+    if str.include?(' aggravate ') || str.include?(' irritate ')
+      obj[' aggravate '] = 'Aggravate means "to add to" an already troublesome or vexing matter or
 condition. Irritate means "to vex" or "to annoy" or "to chafe."'
-      obj['irritate'] = 'Aggravate means "to add to" an already troublesome or vexing matter or
+      obj[' irritate '] = 'Aggravate means "to add to" an already troublesome or vexing matter or
 condition. Irritate means "to vex" or "to annoy" or "to chafe."'
     end
   end
 
   def allright(str, obj)
-    if str.include?('allright')
-      obj['allright'] = 'Idiomatic in familiar speech as a detached phrase in the sense "Agreed," or "Go
+    if str.include?(' allright ')
+      obj[' allright '] = 'Idiomatic in familiar speech as a detached phrase in the sense "Agreed," or "Go
 ahead," or "O.K." Properly written as two words — all right.'
     end
   end
 
   def allude(str, obj)
-    if str.include?('allude')
-      obj['allude'] = 'Do not confuse with elude. You allude to a book; you elude a pursuer. Note, too,
+    if str.include?(' allude ')
+      obj[' allude '] = 'Do not confuse with elude. You allude to a book; you elude a pursuer. Note, too,
 that allude is not synonymous with refer. An allusion is an indirect mention, a reference is
 a specific one.'
     end
   end
 
   def allusion(str, obj)
-    if str.include?('allusion')
-      obj['allusion'] = 'Easily confused with illusion. The first means "an indirect reference"; the second
+    if str.include?(' allusion ')
+      obj[' allusion '] = 'Easily confused with illusion. The first means "an indirect reference"; the second
       means "an unreal image" or "a false impression".'
     end
   end
 
   def alternate(str, obj)
-    if str.include?('alternate') || str.include?('alternative')
-      obj['alternate'] = 'The words are not always interchangeable as nouns or adjectives.
+    if str.include?(' alternate ') || str.include?(' alternative ')
+      obj[' alternate '] = 'The words are not always interchangeable as nouns or adjectives.
 Alternate means every other one in a series; alternative, one of two possibilities. As the
 other one of a series of two, an alternate may stand for "a substitute," but an alternative,
 although used in a similar sense, connotes a matter of choice that is never present with
 alternate.'
-     obj['alternative'] = 'The words are not always interchangeable as nouns or adjectives.
+     obj[' alternative '] = 'The words are not always interchangeable as nouns or adjectives.
 Alternate means every other one in a series; alternative, one of two possibilities. As the
 other one of a series of two, an alternate may stand for "a substitute," but an alternative,
 although used in a similar sense, connotes a matter of choice that is never present with
@@ -47,12 +47,12 @@ alternate.'
   end
 
   def among(str, obj)
-    if str.include?('among') || str.include?('between')
-      obj['among'] = 'When more than two things or persons are involved, among is usually
+    if str.include?(' among ') || str.include?(' between ')
+      obj[' among '] = 'When more than two things or persons are involved, among is usually
 called for: "The money was divided among the four players." When, however, more than
 two are involved but each is considered individually, between is preferred: "an agreement
 between the six heirs."'
-      obj['between'] = 'When more than two things or persons are involved, among is usually
+      obj[' between '] = 'When more than two things or persons are involved, among is usually
 called for: "The money was divided among the four players." When, however, more than
 two are involved but each is considered individually, between is preferred: "an agreement
 between the six heirs."'
@@ -67,29 +67,29 @@ between the six heirs."'
 #   end
 
   def anticipate(str, obj)
-    if str.include?('anticipate')
-      obj['anticipate'] = 'Use expect in the sense of simple expectation.'
+    if str.include?(' anticipate ')
+      obj[' anticipate '] = 'Use expect in the sense of simple expectation.'
     end
   end
 
   def anybody(str, obj)
-    if str.include?('anybody')
-      obj['anybody'] = 'In the sense of "any person," not to be written as two words. Any body means
+    if str.include?(' anybody ')
+      obj[' anybody '] = 'In the sense of "any person," not to be written as two words. Any body means
 "any corpse," or "any human form," or "any group." The rule holds equally for everybody,
 nobody, and somebody.'
     end
   end
 
   def anyone(str, obj)
-    if str.include?('anyone')
-      obj['anyone'] = 'In the sense of "anybody," written as one word. Any one means "any single
+    if str.include?(' anyone ')
+      obj[' anyone '] = 'In the sense of "anybody," written as one word. Any one means "any single
 person" or "any single thing."'
     end
   end
 
   def as_good(str, obj)
-    if str.include?('as good or better than')
-      obj['as good or better than'] = 'Expressions of this type should be corrected by rearranging the
+    if str.include?(' as good or better than ')
+      obj[' as good or better than '] = 'Expressions of this type should be corrected by rearranging the
 sentences.'
     end
   end
