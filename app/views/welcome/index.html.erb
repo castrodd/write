@@ -16,6 +16,10 @@
   </div>
 </nav>
 
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
   <h1 class="title fadein">Add a little <i> Style </i> to your writing</h1>
