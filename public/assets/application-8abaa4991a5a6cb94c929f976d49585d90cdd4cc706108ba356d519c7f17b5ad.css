@@ -1,0 +1,394 @@
+/* line 5, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+* {
+  font-family: Roboto !important;
+}
+
+/* line 9, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+html {
+  height: 100%;
+}
+
+/* line 13, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.doc-navigation {
+  margin: 0;
+  border-radius: 0;
+  background-color: #0d4182;
+  border-color: #0d4182;
+}
+
+/* line 20, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.welcome-back {
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  font-size: 50px;
+}
+
+/* line 29, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+table {
+  color: black;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* line 34, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.table-title {
+  padding: 20px;
+}
+
+/* line 37, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+th {
+  font-size: 1.5em;
+}
+
+/* line 41, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.table-hover {
+  margin-bottom: 0;
+  background-color: white;
+  border-radius: 5px;
+  background-size: cover;
+}
+
+/* line 50, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.btn-block {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* line 54, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* line 58, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.btn-show {
+  background-color: #e89d00;
+}
+
+/* line 62, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.class1 {
+  background-color: #edeef0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* line 70, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.modal-title #myModalLabel {
+  background-color: gray;
+}
+
+/* line 75, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 80, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.container {
+  padding: 0px;
+}
+
+/* line 84, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.welcome-table .welcome-row td {
+  padding: 20px;
+}
+
+/* line 89, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.btn a {
+  color: white !important;
+}
+
+/* line 93, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.new-modal-body {
+  padding: 30px;
+}
+
+/* line 103, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+textarea {
+  height: 10em;
+  width: 20em;
+}
+
+/* line 109, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.boxes {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+/* line 117, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.left-box {
+  height: 500px;
+  width: 100%;
+  padding: 10px;
+  font: 16px/26px Georgia, Garamond, Serif;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  overflow: auto;
+}
+
+/* line 127, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.navbar {
+  z-index: 70;
+}
+
+/* line 130, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.boxes #left {
+  width: 576px;
+  padding: 2em;
+}
+
+/* line 136, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.right-box {
+  margin-left: 20px;
+  height: 500px;
+  width: 100%;
+  padding: 10px;
+  font: 16px/26px Georgia, Garamond, Serif;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  overflow: auto;
+}
+
+/* line 147, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+#right {
+  width: 576px;
+  padding: 2em;
+}
+
+/* line 153, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+mark {
+  background-color: #fd0505;
+}
+
+/* line 157, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 161, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+.d-block {
+  display: block;
+}
+
+/* line 165, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+input.Login3 {
+  margin-left: 8em;
+}
+
+/* line 169, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/documents.scss */
+div.form-group.col-xs-12 {
+  margin: 15px;
+}
+/* line 1, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/modals.scss */
+.views {
+  background-color: #0B3C5D;
+  color: white;
+}
+
+/* line 6, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/modals.scss */
+.modal-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+/* line 4, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/sessions.scss */
+div .modal-header {
+  display: none;
+}
+
+/* line 8, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/sessions.scss */
+div .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 14, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/sessions.scss */
+.logger {
+  margin-left: 1em;
+}
+/* line 4, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/users.scss */
+div .modal-header {
+  display: none;
+}
+
+/* line 8, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/users.scss */
+div .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 14, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/users.scss */
+.logger {
+  margin-left: 1em;
+}
+
+/* line 18, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/users.scss */
+.Login2 {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 10px 60px;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(222, 157, 32, 0.6);
+}
+
+/* line 30, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/users.scss */
+.Login3 {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 10px 60px;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(222, 157, 32, 0.6);
+}
+
+/* line 42, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/users.scss */
+.style-button {
+  float: right;
+}
+/* line 5, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+.bg-1 {
+  color: white;
+  background-image: url(/images/bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  height: 550px;
+}
+
+/* line 17, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+.bg-2 {
+  color: #1D2731;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding: 70px;
+}
+
+/* line 29, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+.bg-3 {
+  color: white;
+  background-image: url(/images/bg2-text.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  padding-top: 175px;
+  padding-bottom: 175px;
+}
+
+/* line 40, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+.fadein {
+  animation: fadeInDown 3s;
+}
+
+/* line 45, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+.margin {
+  font-size: 50px;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* line 60, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+.top-navigation {
+  margin: 0;
+  border-radius: 0;
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* line 69, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+.title {
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+/* line 74, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+.subtitle {
+  margin: 20px;
+}
+
+/* line 78, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+i {
+  color: #de9d20;
+  margin: 0 0.2em;
+}
+
+/* line 84, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+#logo {
+  margin: 25px 10px;
+}
+
+/* line 88, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+#Login a {
+  color: #fff !important;
+}
+/* line 90, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+#Login a:hover {
+  text-decoration: none;
+}
+
+/* line 95, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+#Login {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 10px 60px;
+  text-decoration: none;
+  text-align: center;
+  margin: 35px;
+  background: rgba(222, 157, 32, 0.6);
+}
+
+/* line 107, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+#copyright {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 112, /Users/ddcastro/Desktop/wyncode/write/write/app/assets/stylesheets/welcome.scss */
+.notice {
+  color: red;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

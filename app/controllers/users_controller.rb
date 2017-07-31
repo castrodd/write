@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to documents_path, notice: 'Created Account'
     else
-      flash.now[:notice] = "Your password is too short!"
+      # flash.now[:notice] = "Your password is too short!"
       redirect_to root_path, notice: 'Your password is too short! Try again!'
     end
 

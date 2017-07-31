@@ -6,12 +6,12 @@ $(document).on('turbolinks:load', function() {
     var id = $(this).attr('id');
     var thing = 'p#'+id;
     if ($(thing).attr('style') !== "background-color: yellow;") {
-      $('p').css("background-color", "white");
+      $('p').css("background-color", '#edeef0');
       $(thing).css("background-color", "yellow");
       //$(thing).parent().before("#list p:first");
       $('ul#list').prepend($(thing));
     } else {
-      $('p').css("background-color", "white");
+      $('p').css("background-color", '#edeef0');
     }
   })
 })

@@ -95,82 +95,82 @@ sentences.'
   end
 
   def as_to(str, obj)
-    if str.include?('as to whether')
-      obj['as to whether'] = 'Whether is sufficient.'
+    if str.include?(' as to whether ')
+      obj[' as to whether '] = 'Whether is sufficient.'
     end
   end
 
   def as_yet(str, obj)
-    if str.include?('as yet')
-      obj['as yet'] = 'Yet nearly always is as good, if not better. The chief exception is at the beginning of a sentence, where yet means something
+    if str.include?(' as yet ')
+      obj[' as yet '] = 'Yet nearly always is as good, if not better. The chief exception is at the beginning of a sentence, where yet means something
 different.'
     end
   end
 
   def being(str, obj)
-    if str.include?('being')
-      obj['being'] = 'Not appropriate after "regard as".'
+    if str.include?(' being ')
+      obj[' being '] = 'Not appropriate after "regard as".'
     end
   end
 
   def but(str, obj)
-    if str.include?('doubt but') || str.include?('help but')
-      obj['but'] = 'Unnecessary after doubt and help.'
+    if str.include?(' doubt but ') || str.include?(' help but ')
+      obj[' but '] = 'Unnecessary after doubt and help.'
     end
   end
 
   def can(str, obj)
-    if str.include?('can')
-      obj['can'] = 'Means "am (is, are) able." Not to be used as a substitute for may.'
+    if str.include?(' can ')
+      obj[' can '] = 'Means "am (is, are) able." Not to be used as a substitute for may.'
     end
   end
 
   def careless(str, obj)
-    if str.include?('care less')
-      obj['care less'] = 'The dismissive "I couldn\'t care less" is often used with the shortened "not"
+    if str.include?(' care less ')
+      obj[' care less '] = 'The dismissive "I couldn\'t care less" is often used with the shortened "not"
 mistakenly (and mysteriously) omitted: "I could care less." The error destroys the meaning
 of the sentence and is careless indeed.'
     end
   end
 
   def case(str, obj)
-    if str.include?('case')
-      obj['case'] = 'Often unnecessary. BAD: "In many cases, the rooms lacked air
+    if str.include?(' case ')
+      obj[' case '] = 'Often unnecessary. BAD: "In many cases, the rooms lacked air
 conditioning." BETTER: "Many of the rooms lacked air conditioning."'
     end
   end
 
   def certainly(str, obj)
-    if str.include?('certainly')
-      obj['certainly'] = 'Used indiscriminately by some speakers, much as others use very, in an attempt
+    if str.include?(' certainly ')
+      obj[' certainly '] = 'Used indiscriminately by some speakers, much as others use very, in an attempt
 to intensify any and every statement. A mannerism of this kind, bad in speech, is even
 worse in writing.'
     end
   end
 
   def character(str, obj)
-    if str.include?('character')
-      obj['character'] = 'Often simply redundant, used from a mere habit of wordiness. BAD: "acts of a hostile character" BETTER: "hostile acts"'
+    if str.include?(' character ')
+      obj[' character '] = 'Often simply redundant, used from a mere habit of wordiness. BAD: "acts of a hostile character" BETTER: "hostile acts"'
     end
   end
 
   def claim(str, obj)
-    if str.include?('claim')
-      obj['claim'] = 'Means "lay claim to." Not to be used as a substitute for declare, maintain,
+    if str.include?(' claim ')
+      obj[' claim '] = 'Means "lay claim to." Not to be used as a substitute for declare, maintain,
 or charge.'
     end
   end
 
   def clever(str, obj)
-    if str.include?('clever')
-      obj['clever'] = 'Note that the word means one thing when applied to people, another when applied
+    if str.include?(' clever ')
+      obj[' clever '] = 'Note that the word means one thing when applied to people, another when applied
 to horses. A clever horse is a good-natured one, not an ingenious one. '
     end
   end
 
   def compare(str, obj)
-    if str.include?('compare')
-      obj['compare'] = 'To compare to is to point out or imply resemblances between objects regarded
+    if str.include?(' compare ')
+      obj[' compare '] = 'To compare to is to point out or imply resemblances between objects regarded
 as essentially of a different order; to compare with is mainly to point out differences
 between objects regarded as essentially of the same order. Thus, life has been compared
 to a pilgrimage, to a drama, to a battle; Congress may be compared with the British
@@ -180,85 +180,85 @@ London.'
   end
 
   def comprise(str, obj)
-    if str.include?('comprise')
-      obj['comprise'] = 'Literally, "embrace": A zoo comprises mammals, reptiles, and birds (because it
+    if str.include?(' comprise ')
+      obj[' comprise '] = 'Literally, "embrace": A zoo comprises mammals, reptiles, and birds (because it
 "embraces," or "includes," them). But animals do not comprise ("embrace") a zoo — they
 constitute a zoo.'
     end
   end
 
   def consider(str, obj)
-    if str.include?('consider as')
-      obj['consider'] = 'Not followed by as when it means "believe to be." When considered means "examined" or "discussed," it is followed by as.'
+    if str.include?(' consider as ')
+      obj[' consider '] = 'Not followed by as when it means "believe to be." When considered means "examined" or "discussed," it is followed by as.'
     end
   end
 
   def contact(str, obj)
-    if str.include?('contact')
-      obj['contact'] = 'As a transitive verb, the word is vague and self-important. Do not contact people;
+    if str.include?(' contact ')
+      obj[' contact '] = 'As a transitive verb, the word is vague and self-important. Do not contact people;
 get in touch with them, look them up, phone them, find them, or meet them.'
     end
   end
 
   def cope(str, obj)
-    if str.include?('cope')
-      obj['cope'] = 'An intransitive verb used with with. In formal writing, one doesn\'t "cope," one "copes
+    if str.include?(' cope ')
+      obj[' cope '] = 'An intransitive verb used with with. In formal writing, one doesn\'t "cope," one "copes
 with" something or somebody.'
     end
   end
 
   def currently(str, obj)
-    if str.include?('currently')
-      obj['currently'] = 'In the sense of now with a verb in the present tense, currently is usually
+    if str.include?(' currently ')
+      obj[' currently '] = 'In the sense of now with a verb in the present tense, currently is usually
 redundant; emphasis is better achieved through a more precise reference to time.'
     end
   end
 
   def data(str, obj)
-    if str.include?('data')
-      obj['data'] = 'Like strata, phenomena, and media, data is a plural and is best used with a plural
+    if str.include?(' data ')
+      obj[' data '] = 'Like strata, phenomena, and media, data is a plural and is best used with a plural
 verb. The word, however, is slowly gaining acceptance as a singular.'
     end
   end
 
   def diffthan(str, obj)
-    if str.include?('different than')
-      obj['different than'] = 'Here logic supports established usage: one thing differs from another,
+    if str.include?(' different than ')
+      obj[' different than '] = 'Here logic supports established usage: one thing differs from another,
 hence, different from. Or, other than, unlike.'
     end
   end
 
   def disinterested(str, obj)
-    if str.include?('disinterested')
-      obj['disinterested'] = 'Means "impartial." Do not confuse it with uninterested, which means "not
+    if str.include?(' disinterested ')
+      obj[' disinterested '] = 'Means "impartial." Do not confuse it with uninterested, which means "not
 interested in.'
     end
   end
 
   def divided(str, obj)
-    if str.include?('divided into')
-      obj['divided into'] = 'Not to be misused for composed of. The line is sometimes difficult to draw;
+    if str.include?(' divided into ')
+      obj[' divided into '] = 'Not to be misused for composed of. The line is sometimes difficult to draw;
 doubtless plays are divided into acts, but poems are composed of stanzas. An apple,
 halved, is divided into sections, but an apple is composed of seeds, flesh, and skin.'
     end
   end
 
   def due(str, obj)
-    if str.include?('due to')
-      obj['due to'] = 'Loosely used for through, because of, or owing to, in adverbial phrases. In correct use, synonymous with attributable to: "The accident was due to bad weather";
+    if str.include?(' due to ')
+      obj[' due to '] = 'Loosely used for through, because of, or owing to, in adverbial phrases. In correct use, synonymous with attributable to: "The accident was due to bad weather";
 "losses due to preventable fires."'
     end
   end
 
   def each(str, obj)
-    if str.include?('each and every one')
-      obj['each and every one'] = 'Pitchman\'s jargon. Avoid, except in dialogue.'
+    if str.include?(' each and every one ')
+      obj[' each and every one '] = 'Pitchman\'s jargon. Avoid, except in dialogue.'
     end
   end
 
   def effect(str, obj)
-    if str.include?('effect')
-      obj['effect'] = ' As a noun, means "result"; as a verb, means "to bring about," "to accomplish" (not
+    if str.include?(' effect ')
+      obj[' effect '] = ' As a noun, means "result"; as a verb, means "to bring about," "to accomplish" (not
 to be confused with affect, which means "to influence"). As a noun, often loosely used in perfunctory writing about fashions, music, painting, and
 other arts: "a Southwestern effect"; "effects in pale green"; "very delicate effects"; "subtle
 effects"; "a charming effect was produced." The writer who has a definite meaning to
@@ -267,21 +267,21 @@ express will not take refuge in such vagueness.'
   end
 
   def enormity(str, obj)
-    if str.include?('enormity')
-      obj['enormity'] = 'Use only in the sense of "monstrous wickedness." Misleading, if not wrong,
+    if str.include?(' enormity ')
+      obj[' enormity '] = 'Use only in the sense of "monstrous wickedness." Misleading, if not wrong,
 when used to express bigness.'
     end
   end
 
   def enthuse(str, obj)
-    if str.include?('enthuse')
-      obj['enthuse'] = 'An annoying verb growing out of the noun enthusiasm. Not recommended.'
+    if str.include?(' enthuse ')
+      obj[' enthuse '] = 'An annoying verb growing out of the noun enthusiasm. Not recommended.'
     end
   end
 
   def etc(str, obj)
-    if str.include?('etc')
-      obj['etc'] = 'Literally, "and other things"; sometimes loosely used to mean "and other persons."
+    if str.include?(' etc. ')
+      obj[' etc '] = 'Literally, "and other things"; sometimes loosely used to mean "and other persons."
 The phrase is equivalent to and the rest, and so forth, and hence is not to be used if one of
 these would be insufficient — that is, if the reader would be left in doubt as to any
 important particulars. Least open to objection when it represents the last terms of a list
@@ -293,8 +293,8 @@ probably important enough to be named.'
   end
 
   def fact(str, obj)
-    if str.include?('fact')
-      obj['fact'] = 'Use this word only of matters capable of direct verification, not of matters of
+    if str.include?(' fact ')
+      obj[' fact '] = 'Use this word only of matters capable of direct verification, not of matters of
 judgment. That a particular event happened on a given date and that lead melts at a
 certain temperature are facts. But such conclusions as that Napoleon was the greatest of
 modern generals or that the climate of California is delightful, however defensible they may
@@ -303,51 +303,51 @@ be, are not properly called facts.'
   end
 
   def facility(str, obj)
-    if str.include?('facility')
-      obj['facility'] = 'Why must jails, hospitals, and schools suddenly become "facilities"?'
+    if str.include?(' facility ')
+      obj[' facility '] = 'Why must jails, hospitals, and schools suddenly become "facilities"?'
     end
   end
 
 
   def factor(str, obj)
-    if str.include?('factor')
-      obj['factor'] = 'A hackneyed word; the expressions of which it is a part can usually be replaced by
+    if str.include?(' factor ')
+      obj[' factor '] = 'A hackneyed word; the expressions of which it is a part can usually be replaced by
 something more direct and idiomatic.'
     end
   end
 
   def farther(str, obj)
-    if str.include?('farther') || str.include?('further')
-      obj['farther/further'] = 'The two words are commonly interchanged, but there is a distinction
+    if str.include?(' farther ') || str.include?(' further ')
+      obj[' farther/further '] = 'The two words are commonly interchanged, but there is a distinction
 worth observing: farther serves best as a distance word, further as a time or quantity word.
 You chase a ball farther than the other fellow; you pursue a subject further.'
     end
   end
 
   def feature(str, obj)
-    if str.include?('feature')
-      obj['feature'] = 'Another hackneyed word; like factor, it usually adds nothing to the sentence in
+    if str.include?(' feature ')
+      obj[' feature '] = 'Another hackneyed word; like factor, it usually adds nothing to the sentence in
 which it occurs. As a verb, in the sense of "offer as a special attraction," it is to be avoided.'
     end
   end
 
   def final(str, obj)
-    if str.include?('finalize')
-      obj['finalize'] = ' A pompous, ambiguous verb.'
+    if str.include?(' finalize ')
+      obj[' finalize '] = ' A pompous, ambiguous verb.'
     end
   end
 
   def fix(str, obj)
-    if str.include?('fix')
-      obj['fix'] = 'Colloquial in America for arrange, prepare, mend. The usage is well established. But
+    if str.include?(' fix ')
+      obj[' fix '] = 'Colloquial in America for arrange, prepare, mend. The usage is well established. But
 bear in mind that this verb is from figere: "to make firm," "to place definitely." These are the
 preferred meanings of the word.'
     end
   end
 
   def flammable(str, obj)
-    if str.include?('flammable')
-      obj['flammable'] = 'An oddity, chiefly useful in saving lives. The common word meaning
+    if str.include?(' flammable ')
+      obj[' flammable '] = 'An oddity, chiefly useful in saving lives. The common word meaning
 "combustible" is inflammable. But some people are thrown off by the in- and think
 inflammable means "not combustible." For this reason, trucks carrying gasoline or
 explosives are now marked FLAMMABLE. Unless you are operating such a truck and hence
@@ -356,40 +356,40 @@ are concerned with the safety of children and illiterates, use inflammable.'
   end
 
   def folk(str, obj)
-    if str.include?('folk')
-      obj['folk'] = 'A collective noun, equivalent to people. Use the singular form only. Folks, in the
+    if str.include?(' folk ')
+      obj[' folk '] = 'A collective noun, equivalent to people. Use the singular form only. Folks, in the
 sense of "parents," "family," "those present," is colloquial and too folksy for formal writing.'
     end
   end
 
   def fort(str, obj)
-    if str.include?('fortuitous')
-      obj['fortuitous'] = 'Limited to what happens by chance. Not to be used for fortunate or lucky.'
+    if str.include?(' fortuitous ')
+      obj[' fortuitous '] = 'Limited to what happens by chance. Not to be used for fortunate or lucky.'
     end
   end
 
   def get(str, obj)
-    if str.include?('have got')
-      obj['get'] = 'The colloquial "have got" for "have" should not be used in writing. The preferable form of
+    if str.include?(' have got ')
+      obj[' get '] = 'The colloquial "have got" for "have" should not be used in writing. The preferable form of
 the participle is got, not gotten.'
     end
   end
 
   def gratuitous(str, obj)
-    if str.include?('gratuitous')
-      obj['gratuitous'] = 'Means "unearned," or "unwarranted."'
+    if str.include?(' gratuitous ')
+      obj[' gratuitous '] = 'Means "unearned," or "unwarranted."'
     end
   end
 
   def he(str, obj)
-    if str.include?('he is a man who')
-      obj['he is a man who'] = 'A common type of redundant expression. BAD: "He is a man who is very ambitious." BETTER: "He is very ambitious."'
+    if str.include?(' he is a man who ')
+      obj[' he is a man who '] = 'A common type of redundant expression. BAD: "He is a man who is very ambitious." BETTER: "He is very ambitious."'
     end
   end
 
   def hope(str, obj)
-    if str.include?('hopefully')
-      obj['hopefully'] = 'This once-useful adverb meaning "with hope" has been distorted and is now
+    if str.include?(' hopefully ')
+      obj[' hopefully '] = 'This once-useful adverb meaning "with hope" has been distorted and is now
 widely used to mean "I hope" or "it is to be hoped." Such use is not merely wrong, it is silly.
 To say, "Hopefully I\'ll leave on the noon plane" is to talk nonsense. Do you mean you\'ll
 leave on the noon plane in a hopeful frame of mind? Or do you mean you hope you\'ll leave
@@ -401,77 +401,75 @@ erosion leads to ambiguity, softness, or nonsense.'
   end
 
   def how(str, obj)
-    if str.include?('however')
-      obj['however'] = 'Avoid starting a sentence with however when the meaning is "nevertheless."
+    if str.include?(' however ')
+      obj[' however '] = 'Avoid starting a sentence with however when the meaning is "nevertheless."
 The word usually serves better when not in first position. When however comes first, it means "in whatever way" or "to whatever extent."'
     end
   end
 
   def imply(str, obj)
-    if str.include?('imply') || str.include?('infer')
-      obj['imply/infer'] = ' Not interchangeable. Something implied is something suggested or indicated,
+    if str.include?(' imply ') || str.include?(' infer ')
+      obj[' imply '] = ' Not interchangeable. Something implied is something suggested or indicated,
+though not expressed. Something inferred is something deduced from evidence at hand. COMPARE: "Farming implies early rising."
+"Since she was a farmer, we inferred that she got up early."'
+      obj[' infer '] = ' Not interchangeable. Something implied is something suggested or indicated,
 though not expressed. Something inferred is something deduced from evidence at hand. COMPARE: "Farming implies early rising."
 "Since she was a farmer, we inferred that she got up early."'
     end
   end
 
   def importantly(str, obj)
-    if str.include?('importantly')
-      obj['importantly'] = 'Avoid by rephrasing. BAD: "More importantly, he paid for the damages." BETTER: "What\'s more, he paid for the damages."'
+    if str.include?(' importantly ')
+      obj[' importantly '] = 'Avoid by rephrasing. BAD: "More importantly, he paid for the damages." BETTER: "What\'s more, he paid for the damages."'
     end
   end
 
   def inregard(str, obj)
-    if str.include?('in regard to')
-      obj['in regard to'] = 'Often wrongly written in regards to. But as regards is correct, and means the
+    if str.include?(' in regard to ')
+      obj[' in regard to '] = 'Often wrongly written in regards to. But as regards is correct, and means the
 same thing.'
     end
   end
 
   def inthe(str, obj)
-    if str.include?('in the last analysis')
-      obj['In the last analysis'] = 'A bankrupt expression.'
+    if str.include?(' in the last analysis ')
+      obj[' in the last analysis '] = 'A bankrupt expression.'
     end
   end
 
   def inside(str, obj)
-    if str.include?('inside of') || str.include?('inside')
-      obj['inside of/inside'] = 'The of following inside is correct in the adverbial meaning "in less than."
+    if str.include?(' inside of ') || str.include?(' inside ')
+      obj[' inside of '] = 'The of following inside is correct in the adverbial meaning "in less than."
 In other meanings, of is unnecessary. EXAMPLE: "Inside of five minutes I\'ll be inside the bank."'
-    end
-  end
-
-  def inside(str, obj)
-    if str.include?('inside of')
-      obj['inside of/inside'] = 'The of following inside is correct in the adverbial meaning "in less than."
+      obj[' inside '] = 'The of following inside is correct in the adverbial meaning "in less than."
 In other meanings, of is unnecessary. EXAMPLE: "Inside of five minutes I\'ll be inside the bank."'
     end
   end
 
   def insightful(str, obj)
-    if str.include?('insightful')
-      obj['insightful'] = 'The word is a suspicious overstatement for "perceptive." If it is to be used at all,
+    if str.include?(' insightful ')
+      obj[' insightful '] = 'The word is a suspicious overstatement for "perceptive." If it is to be used at all,
 it should be used for instances of remarkably penetrating vision. Usually, it crops up
 merely to inflate the commonplace.'
     end
   end
 
   def interms(str, obj)
-    if str.include?('in terms of')
-      obj['in terms of'] = 'A piece of padding usually best omitted.'
+    if str.include?(' in terms of ')
+      obj[' in terms of '] = 'A piece of padding usually best omitted.'
     end
   end
 
   def interesting(str, obj)
-    if str.include?('interesting')
-      obj['interesting'] = 'An unconvincing word; avoid it as a means of introduction. Instead of
+    if str.include?(' interesting ')
+      obj[' interesting '] = 'An unconvincing word; avoid it as a means of introduction. Instead of
 announcing that what you are about to tell is interesting, make it so.'
     end
   end
 
   def irregardless(str, obj)
-    if str.include?('irregardless')
-      obj['irregardless'] = 'Should be regardless. The error results from failure to see the negative in -
+    if str.include?(' irregardless ')
+      obj[' irregardless '] = 'Should be regardless. The error results from failure to see the negative in -
 less and from a desire to get it in as a prefix, suggested by such words as irregular,
 irresponsible, and, perhaps especially, irrespective.'
     end
@@ -479,7 +477,7 @@ irresponsible, and, perhaps especially, irrespective.'
 
   def ize(str, obj)
     if str.include?('ize')
-      obj['-ize'] = 'Do not coin verbs by adding this tempting suffix. Many good and useful verbs do end
+      obj['ize'] = 'Do not coin verbs by adding this tempting suffix. Many good and useful verbs do end
 in -ize: summarize, fraternize, harmonize, fertilize. But there is a growing list of
 abominations: containerize, prioritize, finalize, to name three. Be suspicious of -ize; let
 your ear and your eye guide you. Never tack -ize onto a noun to create a verb. Usually you
@@ -489,121 +487,124 @@ unpretentious word use?'
   end
 
   def kind(str, obj)
-    if str.include?('kind of')
-      obj['kind of'] = 'Except in familiar style, not to be used as a substitute for rather or something like.
+    if str.include?(' kind of ')
+      obj[' kind of '] = 'Except in familiar style, not to be used as a substitute for rather or something like.
 Restrict it to its literal sense: "Amber is a kind of fossil resin"; "I dislike that kind of
 publicity." The same holds true for sort of.'
     end
   end
 
   def lay(str, obj)
-    if str.include?('lay')
-      obj['lay'] = 'A transitive verb. Except in slang ("Let it lay"), do not misuse it for the intransitive verb
+    if str.include?(' lay ')
+      obj[' lay '] = 'A transitive verb. Except in slang ("Let it lay"), do not misuse it for the intransitive verb
 lie. The hen, or the play, lays an egg; the llama lies down. The playwright went home and
 lay down.'
     end
   end
 
   def leave(str, obj)
-    if str.include?('leave')
-      obj['leave'] = 'Not to be misused for let. BAD: "Leave it stand the way it is." BETTER: "Let it stand the way it is."'
+    if str.include?(' leave ')
+      obj[' leave '] = 'Not to be misused for let. BAD: "Leave it stand the way it is." BETTER: "Let it stand the way it is."'
     end
   end
 
   def less(str, obj)
-    if str.include?('less')
-      obj['less'] = 'Should not be misused for fewer. Less refers to quantity, fewer to number. "His troubles are less than mine" means "His
+    if str.include?(' less ')
+      obj[' less '] = 'Should not be misused for fewer. Less refers to quantity, fewer to number. "His troubles are less than mine" means "His
 troubles are not so great as mine." "His troubles are fewer than mine" means "His troubles
 are not so numerous as mine."'
     end
   end
 
   def like(str, obj)
-    if str.include?('like')
-      obj['like'] = 'Not to be used for the conjunction as. Like governs nouns and pronouns; before
+    if str.include?(' like ')
+      obj[' like '] = 'Not to be used for the conjunction as. Like governs nouns and pronouns; before
 phrases and clauses the equivalent word is as. BAD: "We spent the evening like in the old days." BETTER: "We spent the evening as in the old days."'
     end
   end
 
   def line(str, obj)
-    if str.include?('along these lines')
-      obj['line'] = 'Line in the sense of "course of procedure, conduct, thought" is
+    if str.include?(' along these lines ')
+      obj[' line '] = 'Line in the sense of "course of procedure, conduct, thought" is
 allowable but has been so overworked, particularly in the phrase along these lines, that a
 writer who aims at freshness or originality had better discard it entirely.'
     end
   end
 
   def literal(str, obj)
-    if str.include?('literal') || str.include?('literally')
-      obj['literal/literally'] = ' Often incorrectly used in support of exaggeration or violent metaphor.'
+    if str.include?(' literal ') || str.include?(' literally ')
+      obj[' literal '] = ' Often incorrectly used in support of exaggeration or violent metaphor.'
+      obj[' literally '] = ' Often incorrectly used in support of exaggeration or violent metaphor.'
     end
   end
 
   def loan(str, obj)
-    if str.include?('loan')
-      obj['loan'] = 'A noun. As a verb, prefer lend. DO: "Lend me your ears." DON\'T: "the loan of your ears."'
+    if str.include?(' loan ')
+      obj[' loan '] = 'A noun. As a verb, prefer lend. DO: "Lend me your ears." DON\'T: "the loan of your ears."'
     end
   end
 
   def meaningful(str, obj)
-    if str.include?('meaningful')
-      obj['meaningful'] = 'A bankrupt adjective. Choose another, or rephrase.'
+    if str.include?(' meaningful ')
+      obj[' meaningful '] = 'A bankrupt adjective. Choose another, or rephrase.'
     end
   end
 
   def memento(str, obj)
-    if str.include?('memento')
-      obj['memento'] = 'Often incorrectly written momento.'
+    if str.include?(' memento ')
+      obj[' memento '] = 'Often incorrectly written momento.'
     end
   end
 
   def most(str, obj)
-    if str.include?('most')
-      obj['most'] = ' Not to be used for almost in formal composition.'
+    if str.include?(' most ')
+      obj[' most '] = ' Not to be used for almost in formal composition.'
     end
   end
 
   def nature(str, obj)
-    if str.include?('nature')
-      obj['nature'] = 'Often simply redundant, used like character. Nature should be avoided in such vague expressions as "a lover of nature," "poems about
+    if str.include?(' nature ')
+      obj[' nature '] = 'Often simply redundant, used like character. Nature should be avoided in such vague expressions as "a lover of nature," "poems about
 nature." Unless more specific statements follow, the reader cannot tell whether the poems have to do with natural scenery, rural life, the sunset, the untracked wilderness, or the
 habits of squirrels.'
     end
   end
 
   def nauseous(str, obj)
-    if str.include?('nauseous') || str.include?('nauseated')
-      obj['nauseous/nauseated'] = 'The first means "sickening to contemplate"; the second means
+    if str.include?(' nauseous ') || str.include?(' nauseated ')
+      obj[' nauseous '] = 'Naseous means "sickening to contemplate"; nauseated means
 "sick at the stomach." Do not, therefore, say, "I feel nauseous," unless you are sure you
 have that effect on others.'
     end
   end
 
   def nice(str, obj)
-    if str.include?('nice')
-      obj['nice'] = 'A shaggy, all-purpose word, to be used sparingly in formal composition. "I had a nice
+    if str.include?(' nice ')
+      obj[' nice '] = 'A shaggy, all-purpose word, to be used sparingly in formal composition. "I had a nice
 time." "It was nice weather." "She was so nice to her mother." The meanings are indistinct.
 Nice is most useful in the sense of "precise" or "delicate": "a nice distinction."'
     end
   end
 
   def nor(str, obj)
-    if str.include?('nor')
-      obj['nor'] = 'Often used wrongly for or after negative expressions.'
+    if str.include?(' nor ')
+      obj[' nor '] = 'Often used wrongly for or after negative expressions.'
     end
   end
 
   def offon(str, obj)
-    if str.include?('offputting') || str.include?('ongoing')
-      obj['offputting/ongoing'] = 'Newfound adjectives, to be avoided because they are inexact and
+    if str.include?(' offputting ') || str.include?(' ongoing ')
+      obj[' offputting '] = 'Newfound adjectives, to be avoided because they are inexact and
+      clumsy. Ongoing is a mix of "continuing" and "active" and is usually superfluous.Offputting might mean "objectionable," "disconcerting," "distasteful."'
+      obj[' ongoing '] = 'Newfound adjectives, to be avoided because they are inexact and
       clumsy. Ongoing is a mix of "continuing" and "active" and is usually superfluous.Offputting might mean "objectionable," "disconcerting," "distasteful."'
     end
   end
 
 
   def oneofthemost(str, obj)
-    if str.include?('one of the most')
-      obj['one of the most'] = 'Avoid this feeble formula. "One of the most exciting developments of
+    if str.include?(' one of the most ')
+      obj[' one of the most '] = 'Avoid this feeble formula. "One of the most exciting developments of
       modern science is ..."; "Switzerland is one of the most beautiful countries of Europe."
       There is nothing wrong with the grammar; the formula is simply threadbare.'
     end
@@ -619,16 +620,16 @@ Nice is most useful in the sense of "precise" or "delicate": "a nice distinction
   end
 
   def partially(str, obj)
-    if str.include?('partially')
-      obj['partially'] = 'Not always interchangeable with partly. Best used in the sense of "to a certain
+    if str.include?(' partially ')
+      obj[' partially '] = 'Not always interchangeable with partly. Best used in the sense of "to a certain
       degree," when speaking of a condition or state: "I\'m partially resigned to it."Partly carries
       the idea of a part as distinct from the whole — usually a physical object.'
     end
   end
 
   def people(str, obj)
-    if str.include?('people')
-      obj['people'] = 'The people is a political term, not to be confused with the public. From the
+    if str.include?(' people ')
+      obj[' people '] = 'The people is a political term, not to be confused with the public. From the
       people comes political support or opposition; from the public comes artistic appreciation or
       commercial patronage. The word people is best not used with words of number, in place of persons. If of "six
       people" five went away, how many people would be left? Answer: one people.'
@@ -636,7 +637,7 @@ Nice is most useful in the sense of "precise" or "delicate": "a nice distinction
   end
 
   def personalize(str, obj)
-    if str.include?('personalize') || str.include?('personally')
+    if str.include?(' personalize ') || str.include?(' personally ')
       obj['personalize'] = 'A pretentious word, often carrying bad advice. Do not personalize your prose;
       simply make it good and keep it clean.'
     end
