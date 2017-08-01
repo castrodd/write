@@ -11,13 +11,9 @@ gem 'docx', '~> 0.2.07', :require => ["docx"]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use sqlite3 as the database for Active Record in Development
-group :development do
-  gem 'sqlite3'
-end
-# Use postgreSQL as the database for Active Record in Production
-group :production do
-  gem 'pg'
-end
+
+gem 'pg'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
