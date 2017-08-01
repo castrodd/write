@@ -23,8 +23,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <!-- <ul class="nav navbar-nav"> </ul> -->
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Back', documents_path, :id=>'willy' %></li>
-        <li><%= link_to 'Log out', logout_path, :id=>'willy' %></li>
+        <li><button type="button" name="button" id="Login"> <%= link_to 'Back', documents_path, :id=>'willy' %></button></li>
+        <li><button type="button" name="button" id="Login"> <%= link_to 'Log out', logout_path, :id=>'willy' %></button></li>
       </ul>
     </div>
   </div>
@@ -36,13 +36,13 @@
 <div class="boxes">
 
   <div id="left">
-    <h2> Document </h2>
+    <h2> <%= @document.title %> </h2>
     <div class="left-box">
     <% if !(tips.nil?) %>
      <% tips.keys.each do |tip| %>
-       <% if doc.include?(tip) %>
+       <% if doc.match(/\s#{Regexp.quote(tip)}\s|\s#{Regexp.quote(tip)}\W|\W#{Regexp.quote(tip)}\s/) %>
          <% id = tip.gsub(/\s/, '') %>
-         <% doc.sub!(tip, "<mark class='doc' id='#{id}'>#{tip}</mark>") %>
+         <% doc.sub!(/\s#{Regexp.quote(tip)}\s|\s#{Regexp.quote(tip)}\W|\W#{Regexp.quote(tip)}\s/, "<mark class='doc' id='#{id}'>#{tip}</mark>") %>
        <% end %>
      <% end %>
      <% @str = doc.html_safe %>

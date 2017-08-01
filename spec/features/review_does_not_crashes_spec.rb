@@ -3,12 +3,11 @@ require 'rails_helper'
 RSpec.feature "review does not crash", type: :feature do
   before do
     visit root_path
-    click_link 'Login'
     click_link 'Sign Up'
     fill_in "Username", id: 'user_username', with: "Special"
     fill_in "Password", id:'user_password', with: "Confidential"
     fill_in "Password confirmation", id:'user_password_confirmation', with: "Confidential"
-    click_button "Create Account"
+    click_button "Join"
     click_button 'Stylize Document'
     fill_in 'document_title', with: "My Awesome Essay"
     fill_in 'document_content', with: "Nothing wrong."
