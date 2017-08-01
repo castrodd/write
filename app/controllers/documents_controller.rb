@@ -40,8 +40,8 @@ class DocumentsController < ApplicationController
         format.html { redirect_to documents_path, notice: 'Document was successfully created.' }
         format.json { render :index, status: :created, location: @documents }
       else
-        format.html { render :new }
-        format.json { render json: @document.errors, status: :unprocessable_entity }
+        format.html { redirect_to documents_path, notice: 'You were missing a title and/or content!' }
+        # format.json { render json: @document.errors, status: :unprocessable_entity }
       end
     end
   end
