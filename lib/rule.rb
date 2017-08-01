@@ -369,7 +369,7 @@ Strictly applicable only to actions: "Is it worth while to telegraph?" The adjec
 
   def main(str, obj)
     @@mylittlepretties.keys.each do |foo|
-      if str.match(/\s#{Regexp.quote(foo)}\s|\s#{Regexp.quote(foo)}\W|\W#{Regexp.quote(foo)}\s/)
+      if str.match(/\s#{Regexp.quote(foo)}\s|\s#{Regexp.quote(foo)}\W|\W#{Regexp.quote(foo)}\s/i)
         obj[foo] = @@mylittlepretties[foo]
       end
     end
