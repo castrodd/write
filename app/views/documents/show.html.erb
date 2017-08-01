@@ -40,9 +40,10 @@
     <div class="left-box">
     <% if !(tips.nil?) %>
      <% tips.keys.each do |tip| %>
-       <% if doc.match(/\s#{Regexp.quote(tip)}\s|\s#{Regexp.quote(tip)}\W|\W#{Regexp.quote(tip)}\s/i) %>
+       <% t = doc.match(/\s#{Regexp.quote(tip)}\s|\s#{Regexp.quote(tip)}\W|\W#{Regexp.quote(tip)}\s/i) %>
+       <% if t %>
          <% id = tip.gsub(/\s/, '') %>
-         <% doc.sub!(/\s#{Regexp.quote(tip)}\s|\s#{Regexp.quote(tip)}\W|\W#{Regexp.quote(tip)}\s/i, " <mark class='doc' id='#{id}'>#{tip}</mark> ") %>
+         <% doc.sub!(/\s#{Regexp.quote(tip)}\s|\s#{Regexp.quote(tip)}\W|\W#{Regexp.quote(tip)}\s/i, " <mark class='doc' id='#{id}'>#{t[0]}</mark> ") %>
        <% end %>
      <% end %>
      <% @str = doc.html_safe %>
