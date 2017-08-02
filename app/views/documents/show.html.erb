@@ -36,7 +36,7 @@
 <div class="boxes">
 
   <div id="left">
-    <h2> <%= @document.title %> </h2>
+    <h2> <%= @document.title.capitalize %> </h2>
     <div class="left-box">
     <% if !(tips.nil?) %>
      <% tips.keys.each do |tip| %>
@@ -55,7 +55,7 @@
   </div>
 
   <div id="right">
-    <h2> Tips </h2>
+    <h2> Style Tips </h2>
     <div class="right-box">
     <ul id="list">
     <% if !(tips.nil?) %>
