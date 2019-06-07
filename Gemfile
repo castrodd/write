@@ -4,9 +4,9 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-gem 'rubyzip'
+gem "rubyzip", ">= 1.2.2"
 
-gem 'docx', '~> 0.2.07', :require => ["docx"]
+gem 'docx', '~> 0.3.0', :require => ["docx"]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use sqlite3 as the database for Active Record in Development
